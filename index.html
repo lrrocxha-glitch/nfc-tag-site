@@ -1,0 +1,902 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>rctag Placas NFC</title>
+<meta name="description" content="Placas de acrílico com NFC e QR Code que levam o cliente direto para a avaliação da sua empresa no Google.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="rctag, início">
+      <span class="logo3d" aria-hidden="true"><svg class="l-side" viewBox="0 0 64 64" style="--z:-7.8px"><path d="M4 32 L16.5 15.5 Q18 14 20.5 14 H53 Q58 14 58 19 V45 Q58 50 53 50 H20.5 Q18 50 16.5 48.5 Z M17.5 28.6 A3.4 3.4 0 1 0 17.5 35.4 A3.4 3.4 0 1 0 17.5 28.6 Z" fill="#6B4100" fill-rule="evenodd"/></svg><svg class="l-side" viewBox="0 0 64 64" style="--z:-6.5px"><path d="M4 32 L16.5 15.5 Q18 14 20.5 14 H53 Q58 14 58 19 V45 Q58 50 53 50 H20.5 Q18 50 16.5 48.5 Z M17.5 28.6 A3.4 3.4 0 1 0 17.5 35.4 A3.4 3.4 0 1 0 17.5 28.6 Z" fill="#7E4D00" fill-rule="evenodd"/></svg><svg class="l-side" viewBox="0 0 64 64" style="--z:-5.2px"><path d="M4 32 L16.5 15.5 Q18 14 20.5 14 H53 Q58 14 58 19 V45 Q58 50 53 50 H20.5 Q18 50 16.5 48.5 Z M17.5 28.6 A3.4 3.4 0 1 0 17.5 35.4 A3.4 3.4 0 1 0 17.5 28.6 Z" fill="#935A00" fill-rule="evenodd"/></svg><svg class="l-side" viewBox="0 0 64 64" style="--z:-3.9px"><path d="M4 32 L16.5 15.5 Q18 14 20.5 14 H53 Q58 14 58 19 V45 Q58 50 53 50 H20.5 Q18 50 16.5 48.5 Z M17.5 28.6 A3.4 3.4 0 1 0 17.5 35.4 A3.4 3.4 0 1 0 17.5 28.6 Z" fill="#A86700" fill-rule="evenodd"/></svg><svg class="l-side" viewBox="0 0 64 64" style="--z:-2.6px"><path d="M4 32 L16.5 15.5 Q18 14 20.5 14 H53 Q58 14 58 19 V45 Q58 50 53 50 H20.5 Q18 50 16.5 48.5 Z M17.5 28.6 A3.4 3.4 0 1 0 17.5 35.4 A3.4 3.4 0 1 0 17.5 28.6 Z" fill="#BD7400" fill-rule="evenodd"/></svg><svg class="l-side" viewBox="0 0 64 64" style="--z:-1.3px"><path d="M4 32 L16.5 15.5 Q18 14 20.5 14 H53 Q58 14 58 19 V45 Q58 50 53 50 H20.5 Q18 50 16.5 48.5 Z M17.5 28.6 A3.4 3.4 0 1 0 17.5 35.4 A3.4 3.4 0 1 0 17.5 28.6 Z" fill="#D08000" fill-rule="evenodd"/></svg><svg class="l-front" viewBox="0 0 64 64"><defs><linearGradient id="lgF" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFE08A"/><stop offset=".45" stop-color="#FFC23D"/><stop offset="1" stop-color="#F29A00"/></linearGradient><linearGradient id="lgG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".75"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="lgC"><path d="M4 32 L16.5 15.5 Q18 14 20.5 14 H53 Q58 14 58 19 V45 Q58 50 53 50 H20.5 Q18 50 16.5 48.5 Z M17.5 28.6 A3.4 3.4 0 1 0 17.5 35.4 A3.4 3.4 0 1 0 17.5 28.6 Z" clip-rule="evenodd"/></clipPath></defs><path d="M4 32 L16.5 15.5 Q18 14 20.5 14 H53 Q58 14 58 19 V45 Q58 50 53 50 H20.5 Q18 50 16.5 48.5 Z M17.5 28.6 A3.4 3.4 0 1 0 17.5 35.4 A3.4 3.4 0 1 0 17.5 28.6 Z" fill="url(#lgF)" fill-rule="evenodd"/><g clip-path="url(#lgC)"><path d="M0 0H64V27Q34 36 0 26Z" fill="url(#lgG)"/></g><g fill="none" stroke="#0A1430" stroke-width="3.4" stroke-linecap="round"><path d="M31 25.5a9 9 0 0 1 0 13"/><path d="M37.5 21a15.5 15.5 0 0 1 0 22"/><path d="M44 16.8a21.5 21.5 0 0 1 0 30.4"/></g><circle cx="25.5" cy="32" r="2.6" fill="#0A1430"/></svg></span>
+      <span class="wm">rc<b>tag</b></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Páginas">
+      <a href="index.html" aria-current="page">Início</a>
+      <a href="produto.html">O produto</a>
+      <a href="beneficios.html">Para o seu negócio</a>
+      <a href="#monte">Monte a sua</a>
+      <a href="#planos">Planos</a>
+      <a class="btn btn-gold js-wa nav-wa" href="#" target="_blank" rel="noopener">Pedir no WhatsApp</a>
+    </nav>
+    <a class="btn btn-gold js-wa" href="#" target="_blank" rel="noopener">Pedir no WhatsApp</a>
+    <button type="button" class="menu-btn" aria-controls="nav" aria-expanded="false" aria-label="Abrir menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+</header>
+
+
+<main>
+  <!-- ============ SCROLL-WORLD FLIGHT ============ -->
+  <section class="flight" id="inicio" aria-label="Como a placa funciona, em um voo pelo balcão">
+    <div class="stage">
+      <canvas id="world" aria-hidden="true"></canvas>
+
+      <article class="copy on" data-i="0">
+        <span class="eyebrow">Placa NFC + QR para avaliações no Google</span>
+        <h1>Encostou, avaliou.</h1>
+        <p>Uma placa de acrílico no seu balcão que leva o cliente direto para a tela de avaliação da sua empresa no Google. Sem aplicativo e sem digitar nada.</p>
+        <div class="row">
+          <a class="btn btn-gold" href="#monte">Montar minha placa</a>
+          <a class="btn btn-ghost" href="#como-funciona">Ver a demonstração</a>
+        </div>
+      </article>
+      <article class="copy" data-i="1">
+        <span class="eyebrow">Passo 1 · O toque</span>
+        <h2>O cliente aproxima o celular.</h2>
+        <p>O chip NFC abre o link na hora. Quem prefere a câmera usa o QR Code impresso na mesma placa.</p>
+        <div class="row"><span class="chip">NFC · 13,56 MHz</span><span class="chip">QR Code</span><span class="chip">iPhone e Android</span></div>
+      </article>
+      <article class="copy" data-i="2">
+        <span class="eyebrow">Passo 2 · A avaliação</span>
+        <h2>Cai direto nas estrelas.</h2>
+        <p>A tela de avaliação abre pronta. O cliente escolhe a nota e comenta ainda no balcão, com a experiência fresca na memória.</p>
+        <div class="row"><span class="chip"><span class="stars-inline">★★★★★</span> em 10 segundos</span></div>
+      </article>
+      <article class="copy" data-i="3">
+        <span class="eyebrow">Passo 3 · O resultado</span>
+        <h2>Mais avaliações, mais destaque no mapa.</h2>
+        <p>Avaliações recentes e em volume ajudam sua empresa a aparecer melhor no Google Maps e convencem quem ainda está escolhendo onde ir.</p>
+      </article>
+      <article class="copy" data-i="4">
+        <span class="eyebrow">A placa</span>
+        <h2>Acrílico, chip e QR em uma peça só.</h2>
+        <p>Pronta para balcão, caixa ou mesa. O link fica com a gente: se algo mudar, atualizamos sem trocar a placa.</p>
+        <div class="row">
+          <a class="btn btn-gold" href="#monte">Montar minha placa</a>
+          <a class="btn btn-ghost" href="#planos">Ver preços</a>
+        </div>
+      </article>
+
+      <nav class="rail" aria-label="Etapas do voo">
+        <button type="button" data-go="0" class="on"><span>Balcão</span><i></i></button>
+        <button type="button" data-go="1"><span>Toque</span><i></i></button>
+        <button type="button" data-go="2"><span>Avaliação</span><i></i></button>
+        <button type="button" data-go="3"><span>Mapa</span><i></i></button>
+        <button type="button" data-go="4"><span>A placa</span><i></i></button>
+      </nav>
+      <div class="hint" aria-hidden="true">role para voar<i></i></div>
+      <div class="progress" aria-hidden="true"><b></b></div>
+    </div>
+    <div class="track" aria-hidden="true"></div>
+  </section>
+
+  <!-- ============ SPECS ============ -->
+  <div class="specs">
+    <div class="wrap">
+      <div class="spec" data-reveal><b>NTAG213</b><span>chip NFC com 144 bytes, lido por qualquer celular com NFC</span></div>
+      <div class="spec" data-reveal><b>NFC + QR</b><span>dois caminhos na mesma placa para ninguém ficar de fora</span></div>
+      <div class="spec" data-reveal><b>3 mm</b><span>acrílico com base de apoio para balcão e caixa</span></div>
+      <div class="spec" data-reveal><b>Link editável</b><span>trocamos o destino sem trocar a placa</span></div>
+    </div>
+  </div>
+
+
+  <!-- ============ DOORS → subpages ============ -->
+  <section class="block" id="conheca" style="padding-bottom:0">
+    <div class="wrap">
+      <div class="head" data-reveal><span class="eyebrow">Conheça a fundo</span><h2>Por dentro da placa, e do que ela faz pelo seu negócio.</h2></div>
+      <div class="doors">
+        <a class="door" href="produto.html" data-tilt="8" data-reveal data-reveal-delay="1">
+          <img class="art" src="img/placa-rctag.webp" alt="" loading="lazy">
+          <span class="eyebrow" style="color:#AFBCD2">O produto</span>
+          <h3 class="pop">Gire a placa em 3D e veja cada camada.</h3>
+          <p>Acrílico, impressão, chip NFC e QR Code: como tudo se encaixa em uma peça só.</p>
+          <span class="go pop">Ver o produto →</span>
+        </a>
+        <a class="door" href="beneficios.html" data-tilt="8" data-reveal data-reveal-delay="2">
+          <svg class="pinart" viewBox="0 0 100 100" aria-hidden="true"><defs><radialGradient id="pg" cx="40%" cy="30%"><stop offset="0" stop-color="#FFE08A"/><stop offset="1" stop-color="#F2A900"/></radialGradient></defs><ellipse cx="50" cy="90" rx="26" ry="6" fill="rgba(242,169,0,.35)"/><path d="M50 88C38 70 26 58 26 42a24 24 0 0 1 48 0c0 16-12 28-24 46z" fill="url(#pg)"/><circle cx="50" cy="42" r="10" fill="#0A1430"/><g fill="#FFC23D"><path d="M18 18l2 4 4 .6-3 3 .7 4.4-3.7-2-3.7 2 .7-4.4-3-3 4-.6z"/><path d="M84 12l2 4 4 .6-3 3 .7 4.4-3.7-2-3.7 2 .7-4.4-3-3 4-.6z"/></g></svg>
+          <span class="eyebrow" style="color:#AFBCD2">Para o seu negócio</span>
+          <h3 class="pop">Mais avaliações, mais clientes te encontrando.</h3>
+          <p>O que muda no seu Google, na sua reputação e no dia a dia do balcão.</p>
+          <span class="go pop">Ver os benefícios →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DEMO ============ -->
+  <section class="block" id="como-funciona">
+    <div class="wrap demo">
+      <div class="phone-stage" id="phoneStage">
+      <div class="phone-float">
+      <div class="phone" id="phone">
+        <i class="edge" style="--z:-4px"></i><i class="edge" style="--z:-8px"></i><i class="edge" style="--z:-12px"></i><i class="edge" style="--z:-16px"></i>
+        <i class="btn-side" aria-hidden="true"></i>
+        <div class="screen">
+          <div class="notch"></div>
+          <div class="state" data-s="idle">
+            <div class="nfc3d" aria-hidden="true">
+              <div class="floor"><i></i><i></i><i></i><b></b></div>
+              <span class="beam"></span>
+              <img class="miniplate" src="img/placa-rctag.webp" alt="">
+            </div>
+            <p class="rv-name">Pronto para ler</p>
+            <p class="rv-sub">Aproxime o celular da placa</p>
+            <span class="ready-chip"><i></i>NFC ativo</span>
+          </div>
+          <div class="state" data-s="review" hidden>
+            <p class="rv-sub">Avaliar no Google</p>
+            <p class="rv-name js-bizname">Café Ponto Doce</p>
+            <div class="rv-stars" role="group" aria-label="Escolha a nota">
+              <button type="button" data-v="1" aria-label="1 estrela">★</button>
+              <button type="button" data-v="2" aria-label="2 estrelas">★</button>
+              <button type="button" data-v="3" aria-label="3 estrelas">★</button>
+              <button type="button" data-v="4" aria-label="4 estrelas">★</button>
+              <button type="button" data-v="5" aria-label="5 estrelas">★</button>
+            </div>
+            <div class="rv-box">Conte como foi sua experiência…</div>
+            <button type="button" class="rv-send" disabled>Publicar</button>
+          </div>
+          <div class="state" data-s="done" hidden>
+            <p class="done-star" aria-hidden="true">★</p>
+            <p class="rv-name">Avaliação publicada</p>
+            <p class="rv-sub">Levou <b class="js-secs">8</b> segundos, do toque até a publicação.</p>
+          </div>
+        </div>
+        <i class="sheen" aria-hidden="true"></i>
+      </div>
+      </div>
+      </div>
+      <div class="demo-copy">
+        <span class="eyebrow">Demonstração</span>
+        <h2 style="font-size:clamp(2.2rem,4.6vw,3.6rem)">Teste o caminho do seu cliente.</h2>
+        <ol>
+          <li><div><b>Encoste</b><span>O celular lê o chip da placa e abre o link sem aplicativo.</span></div></li>
+          <li><div><b>Escolha a nota</b><span>A tela de avaliação da sua empresa já aparece aberta.</span></div></li>
+          <li><div><b>Publique</b><span>A avaliação entra no seu perfil do Google na hora.</span></div></li>
+        </ol>
+        <div class="row">
+          <button type="button" class="btn btn-ink" id="tapBtn">Encostar o celular</button>
+          <button type="button" class="btn btn-ghost" id="resetBtn">Recomeçar</button>
+        </div>
+        <p class="fine">Simulação ilustrativa. No uso real, a tela é a página de avaliação do Google da sua empresa.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CUSTOMIZER ============ -->
+  <section class="block" id="monte" style="padding-top:0">
+    <div class="wrap">
+      <div class="head" data-reveal>
+        <span class="eyebrow">Monte a sua</span>
+        <h2>Veja sua placa antes de pedir.</h2>
+        <p>Escreva o nome da empresa, escolha o modelo e a quantidade. Passe o mouse ou o dedo na placa para ver o acrílico de vários ângulos.</p>
+      </div>
+      <div class="build">
+        <div class="preview" id="preview">
+          <div class="tilt" id="tilt"><canvas id="plateCanvas" width="1128" height="952" aria-label="Prévia da placa rctag"></canvas></div>
+          <span class="note">PLACA RCTAG · NFC + QR CODE</span>
+        </div>
+        <form class="form" id="builder" autocomplete="off">
+          <div class="field">
+            <label for="bizName">Nome da empresa</label>
+            <input type="text" id="bizName" maxlength="28" value="Café Ponto Doce">
+          </div>
+          <div class="field">
+            <span class="lbl" id="modelLbl">Modelo</span>
+            <div class="seg" role="group" aria-labelledby="modelLbl">
+              <button type="button" class="opt" data-model="padrao" aria-pressed="false"><b>Padrão</b><span>A placa rctag como na foto</span></button>
+              <button type="button" class="opt" data-model="personalizada" aria-pressed="true"><b>Personalizada</b><span>Com o nome ou a logo da sua empresa</span></button>
+            </div>
+          </div>
+          <div class="field">
+            <span class="lbl" id="colorLbl">Cor da placa</span>
+            <div class="swatches" role="group" aria-labelledby="colorLbl">
+              <button type="button" class="sw" data-color="azul" aria-pressed="true"><i style="background:linear-gradient(180deg,#1A47C8 50%,#F7F8FA 50%)"></i>Azul e branca</button>
+              <button type="button" class="sw" data-color="preta" aria-pressed="false"><i style="background:linear-gradient(180deg,#111114 50%,#F7F8FA 50%)"></i>Preta e branca</button>
+            </div>
+          </div>
+          <div class="field">
+            <span class="lbl" id="qtyLbl">Quantidade</span>
+            <div class="qty" role="group" aria-labelledby="qtyLbl">
+              <button type="button" id="minus" aria-label="Diminuir">−</button>
+              <output id="qty" aria-live="polite">1</output>
+              <button type="button" id="plus" aria-label="Aumentar">+</button>
+              <span class="fine" style="margin-left:10px">3+ unidades: 10% off · 10+: 20% off</span>
+            </div>
+          </div>
+          <div class="total">
+            <div><span class="price" id="price">R$ 49</span><small id="priceNote">1 placa personalizada</small></div>
+            <a class="btn btn-gold js-wa" id="orderBtn" href="#" target="_blank" rel="noopener">Pedir no WhatsApp</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CALCULATOR ============ -->
+  <section class="block" id="resultado" style="padding-top:0">
+    <div class="wrap">
+      <div class="head" data-reveal>
+        <span class="eyebrow">Resultado</span>
+        <h2>Quantas avaliações a mais por mês?</h2>
+        <p>A maioria dos clientes satisfeitos não avalia porque dá trabalho. Com a placa no balcão, o pedido vira um gesto de dois segundos.</p>
+      </div>
+      <div class="calc" data-reveal>
+        <div class="form">
+          <div class="field">
+            <label for="visits">Atendimentos por dia</label>
+            <input type="range" id="visits" min="10" max="400" step="10" value="80">
+            <output for="visits" id="visitsOut">80 clientes por dia</output>
+          </div>
+          <div class="field">
+            <label for="days">Dias abertos por mês</label>
+            <input type="range" id="days" min="10" max="31" step="1" value="26">
+            <output for="days" id="daysOut">26 dias</output>
+          </div>
+          <div class="field">
+            <label for="rate">Quantos clientes encostam o celular</label>
+            <select id="rate">
+              <option value="0.01">1 em cada 100 (conservador)</option>
+              <option value="0.03" selected>3 em cada 100 (típico)</option>
+              <option value="0.05">5 em cada 100 (equipe incentiva)</option>
+            </select>
+          </div>
+        </div>
+        <div class="result" aria-live="polite">
+          <span class="eyebrow">Estimativa de novas avaliações</span>
+          <div class="big" id="perMonth">62<small>por mês</small></div>
+          <div>
+            <div class="bars" id="bars" aria-hidden="true"></div>
+            <div class="bars-lbl"><span>mês 1</span><span>acumulado em 6 meses: <b id="sixMonths">374</b></span></div>
+          </div>
+          <p class="fine">Conta simples: atendimentos × dias × taxa escolhida. É uma estimativa, não uma promessa. O resultado real depende do movimento e de a equipe lembrar o cliente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PLANS ============ -->
+  <section class="block" id="planos" style="padding-top:0">
+    <div class="wrap">
+      <div class="head" data-reveal>
+        <span class="eyebrow">Planos</span>
+        <h2>Uma placa, pagamento único.</h2>
+        <p>Sem mensalidade para o link de avaliação. Você paga a placa e ela trabalha no balcão.</p>
+      </div>
+      <div class="plans">
+        <article class="plan" data-tilt="6" data-reveal>
+          <h3>Padrão</h3>
+          <div class="amount">R$ 25<small> /unidade</small></div>
+          <p class="muted">Para começar hoje com uma arte pronta.</p>
+          <ul><li>NFC + QR Code configurados</li><li>Nome da empresa na placa</li><li>Link para sua página de avaliação</li><li>Base de apoio para balcão</li></ul>
+          <a class="btn btn-ghost js-wa" data-plan="Padrão" href="#" target="_blank" rel="noopener">Quero a padrão</a>
+        </article>
+        <article class="plan feature" data-tilt="6" data-reveal data-reveal-delay="1">
+          <span class="badge">Mais pedida</span>
+          <h3>Personalizada</h3>
+          <div class="amount">R$ 49<small> /unidade</small></div>
+          <p class="muted">Com a cara da sua marca, feita para aparecer.</p>
+          <ul><li>Tudo do plano padrão</li><li>Sua logo e suas cores</li><li>Texto de chamada do seu jeito</li><li>Prova digital antes de produzir</li></ul>
+          <a class="btn btn-gold js-wa" data-plan="Personalizada" href="#" target="_blank" rel="noopener">Quero a personalizada</a>
+        </article>
+        <article class="plan" data-tilt="6" data-reveal>
+          <h3>Redes e franquias</h3>
+          <div class="amount">Sob consulta</div>
+          <p class="muted">Para várias lojas, filiais ou revenda.</p>
+          <ul><li>Desconto por volume</li><li>Um link por unidade</li><li>Troca de links centralizada</li><li>Atendimento dedicado</li></ul>
+          <a class="btn btn-ghost js-wa" data-plan="Redes e franquias" href="#" target="_blank" rel="noopener">Pedir orçamento</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="block" id="duvidas" style="padding-top:0">
+    <div class="wrap">
+      <div class="head" data-reveal><span class="eyebrow">Dúvidas</span><h2>Perguntas de quem está no balcão.</h2></div>
+      <div class="faq">
+        <details><summary>Funciona em qualquer celular?</summary><p>Android com NFC e iPhone XR ou mais novo leem a placa só de encostar. Para qualquer outro aparelho existe o QR Code impresso na mesma placa, que abre pela câmera.</p></details>
+        <details><summary>O cliente precisa baixar algum aplicativo?</summary><p>Não. O celular abre o link direto no navegador, já na tela de avaliação da sua empresa.</p></details>
+        <details><summary>Posso mudar para onde a placa leva?</summary><p>Sim. O link é gerenciado por nós. Se você mudar de endereço, de perfil ou quiser apontar para outra página, atualizamos sem trocar a placa.</p></details>
+        <details><summary>Serve para Instagram, cardápio ou Wi-Fi?</summary><p>Serve. A placa pode levar para qualquer página. O uso mais pedido é avaliação no Google, mas dá para usar para Instagram, cardápio digital, WhatsApp ou uma página de links.</p></details>
+        <details><summary>Qual o prazo de entrega?</summary><p>O prazo depende do modelo e da quantidade e é confirmado no WhatsApp junto com o pedido.</p></details>
+        <details><summary>É permitido pedir avaliação para o cliente?</summary><p>Sim. Pedir avaliação é permitido. O que as regras do Google proíbem é oferecer recompensa em troca da avaliação ou pedir apenas notas positivas. A placa só facilita o caminho.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top:0">
+    <div class="wrap">
+      <div class="final" data-tilt="4" data-reveal>
+        <div>
+          <h2>Seu balcão pedindo avaliação por você.</h2>
+          <p>Mande o nome da sua empresa no WhatsApp e receba a prévia da sua placa.</p>
+        </div>
+        <div class="actions">
+          <a class="btn btn-gold js-wa" href="#" target="_blank" rel="noopener">Falar no WhatsApp</a>
+          <span class="num">WhatsApp: <span id="waNum">(61) 98354-4077</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="foot-brand"><span class="logo3d" aria-hidden="true"><svg class="l-side" viewBox="0 0 64 64" style="--z:-7.8px"><path d="M4 32 L16.5 15.5 Q18 14 20.5 14 H53 Q58 14 58 19 V45 Q58 50 53 50 H20.5 Q18 50 16.5 48.5 Z M17.5 28.6 A3.4 3.4 0 1 0 17.5 35.4 A3.4 3.4 0 1 0 17.5 28.6 Z" fill="#6B4100" fill-rule="evenodd"/></svg><svg class="l-side" viewBox="0 0 64 64" style="--z:-6.5px"><path d="M4 32 L16.5 15.5 Q18 14 20.5 14 H53 Q58 14 58 19 V45 Q58 50 53 50 H20.5 Q18 50 16.5 48.5 Z M17.5 28.6 A3.4 3.4 0 1 0 17.5 35.4 A3.4 3.4 0 1 0 17.5 28.6 Z" fill="#7E4D00" fill-rule="evenodd"/></svg><svg class="l-side" viewBox="0 0 64 64" style="--z:-5.2px"><path d="M4 32 L16.5 15.5 Q18 14 20.5 14 H53 Q58 14 58 19 V45 Q58 50 53 50 H20.5 Q18 50 16.5 48.5 Z M17.5 28.6 A3.4 3.4 0 1 0 17.5 35.4 A3.4 3.4 0 1 0 17.5 28.6 Z" fill="#935A00" fill-rule="evenodd"/></svg><svg class="l-side" viewBox="0 0 64 64" style="--z:-3.9px"><path d="M4 32 L16.5 15.5 Q18 14 20.5 14 H53 Q58 14 58 19 V45 Q58 50 53 50 H20.5 Q18 50 16.5 48.5 Z M17.5 28.6 A3.4 3.4 0 1 0 17.5 35.4 A3.4 3.4 0 1 0 17.5 28.6 Z" fill="#A86700" fill-rule="evenodd"/></svg><svg class="l-side" viewBox="0 0 64 64" style="--z:-2.6px"><path d="M4 32 L16.5 15.5 Q18 14 20.5 14 H53 Q58 14 58 19 V45 Q58 50 53 50 H20.5 Q18 50 16.5 48.5 Z M17.5 28.6 A3.4 3.4 0 1 0 17.5 35.4 A3.4 3.4 0 1 0 17.5 28.6 Z" fill="#BD7400" fill-rule="evenodd"/></svg><svg class="l-side" viewBox="0 0 64 64" style="--z:-1.3px"><path d="M4 32 L16.5 15.5 Q18 14 20.5 14 H53 Q58 14 58 19 V45 Q58 50 53 50 H20.5 Q18 50 16.5 48.5 Z M17.5 28.6 A3.4 3.4 0 1 0 17.5 35.4 A3.4 3.4 0 1 0 17.5 28.6 Z" fill="#D08000" fill-rule="evenodd"/></svg><svg class="l-front" viewBox="0 0 64 64"><defs><linearGradient id="lgF2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFE08A"/><stop offset=".45" stop-color="#FFC23D"/><stop offset="1" stop-color="#F29A00"/></linearGradient><linearGradient id="lgG2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".75"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="lgC2"><path d="M4 32 L16.5 15.5 Q18 14 20.5 14 H53 Q58 14 58 19 V45 Q58 50 53 50 H20.5 Q18 50 16.5 48.5 Z M17.5 28.6 A3.4 3.4 0 1 0 17.5 35.4 A3.4 3.4 0 1 0 17.5 28.6 Z" clip-rule="evenodd"/></clipPath></defs><path d="M4 32 L16.5 15.5 Q18 14 20.5 14 H53 Q58 14 58 19 V45 Q58 50 53 50 H20.5 Q18 50 16.5 48.5 Z M17.5 28.6 A3.4 3.4 0 1 0 17.5 35.4 A3.4 3.4 0 1 0 17.5 28.6 Z" fill="url(#lgF2)" fill-rule="evenodd"/><g clip-path="url(#lgC2)"><path d="M0 0H64V27Q34 36 0 26Z" fill="url(#lgG2)"/></g><g fill="none" stroke="#0A1430" stroke-width="3.4" stroke-linecap="round"><path d="M31 25.5a9 9 0 0 1 0 13"/><path d="M37.5 21a15.5 15.5 0 0 1 0 22"/><path d="M44 16.8a21.5 21.5 0 0 1 0 30.4"/></g><circle cx="25.5" cy="32" r="2.6" fill="#0A1430"/></svg></span><span>© 2026 rctag · Placas NFC para avaliações · <a href="produto.html">O produto</a> · <a href="beneficios.html">Para o seu negócio</a></span></span>
+    <span>Google e Google Maps são marcas da Google LLC. A rctag não é afiliada ao Google.</span>
+  </div>
+</footer>
+
+
+<script src="vendor/three.min.js"></script>
+<script src="assets/fx.js"></script>
+<script>
+/* =====================================================================
+   rctag — landing page script
+   WHATSAPP: o número real fica em assets/fx.js (RCTAG.whatsapp).
+   ===================================================================== */
+const WHATSAPP = RCTAG.whatsapp;   // o número fica em assets/fx.js
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---------- helpers ---------- */
+function seeded(seed){ let s = seed>>>0 || 1; return () => (s = (s*1664525 + 1013904223)>>>0) / 4294967296; }
+
+/* ---------- WhatsApp links ---------- */
+function waLink(text){ return 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(text); }
+function fmtBRL(v){ return v.toLocaleString('pt-BR', { style:'currency', currency:'BRL', minimumFractionDigits: v % 1 ? 2 : 0, maximumFractionDigits:2 }); }
+
+/* ---------- customizer ---------- */
+const state = { name:'Café Ponto Doce', model:'personalizada', qty:1, color:'azul' };
+const PRICES = { padrao:25, personalizada:49 };
+const plateCanvas = document.getElementById('plateCanvas');
+
+/* The real rctag plate photo (background removed). */
+const PLATE_IMG = new Image();
+PLATE_IMG.src = 'img/placa-rctag.webp';
+PLATE_IMG.addEventListener('load', () => { update(); if(world) world.plateReady(); });
+
+/* Black variant: same plate, with black wherever the classic one is blue
+   (top band, edges and the "criado por" line). Everything else stays as is. */
+let PLATE_BLACK = null;
+function blackPlate(){
+  if(PLATE_BLACK) return PLATE_BLACK;
+  const W = PLATE_IMG.naturalWidth, H = PLATE_IMG.naturalHeight;
+  const c = document.createElement('canvas'); c.width = W; c.height = H;
+  const x = c.getContext('2d'); x.drawImage(PLATE_IMG, 0, 0);
+  const im = x.getImageData(0, 0, W, H), d = im.data;
+  for(let i = 0; i < d.length; i += 4){
+    if(d[i+3] < 8) continue;
+    const r = d[i], g = d[i+1], b = d[i+2];
+    let k = Math.min(1, Math.max(0, (b - Math.max(r, g) - 18) / 50));   // how blue this pixel is
+    if(!k) continue;
+    // Google "G" and the rainbow stripe keep their colors: there only the darker band blue turns black.
+    const p = i / 4, px = p % W * 1128 / W, py = (p / W | 0) * 952 / H;
+    if((py > 365 && py < 465) || Math.hypot(px - 562, py - 425) < 135) k *= Math.min(1, Math.max(0, (112 - g) / 14));
+    if(!k) continue;
+    const Y = .299*r + .587*g + .114*b, v = 10 + Y * .16;               // keep the shading, in near-black
+    d[i] = r + (v - r) * k; d[i+1] = g + (v - g) * k; d[i+2] = b + (v + 3 - b) * k;
+  }
+  x.putImageData(im, 0, 0);
+  return (PLATE_BLACK = c);
+}
+
+function drawRealPlate(canvas, opt){
+  const ctx = canvas.getContext('2d'), W = canvas.width, H = canvas.height;
+  ctx.clearRect(0,0,W,H);
+  if(!PLATE_IMG.complete || !PLATE_IMG.naturalWidth) return;
+  const dark = opt.color === 'preta';
+  ctx.drawImage(dark ? blackPlate() : PLATE_IMG, 0, 0, W, H);
+  if(opt.model === 'padrao') return;
+  // Personalizada: the customer's name goes on the bottom line of the plate.
+  const y = H * .945;
+  const band = ctx.createLinearGradient(0, y - 34, 0, y + 30);
+  const bg = ['rgba(247,248,250,0)', '#F7F8FA', '#F4F5F8', 'rgba(244,245,248,0)'];
+  band.addColorStop(0, bg[0]); band.addColorStop(.25, bg[1]); band.addColorStop(.8, bg[2]); band.addColorStop(1, bg[3]);
+  ctx.fillStyle = band; ctx.fillRect(W*.2, y - 34, W*.6, 64);
+  const name = (opt.name || '').trim() || 'Sua empresa';
+  let fs = 40; ctx.font = `800 ${fs}px "Bricolage Grotesque", system-ui, sans-serif`;
+  while(ctx.measureText(name).width > W*.56 && fs > 20){ fs -= 2; ctx.font = `800 ${fs}px "Bricolage Grotesque", system-ui, sans-serif`; }
+  ctx.fillStyle = dark ? '#111114' : '#1A47C8'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.fillText(name, W/2, y);
+}
+// Color switch: the plate turns around in 3D and comes back in the new color.
+document.querySelectorAll('.sw[data-color]').forEach(b => b.addEventListener('click', () => {
+  if(state.color === b.dataset.color) return;
+  document.querySelectorAll('.sw[data-color]').forEach(x => x.setAttribute('aria-pressed', x===b ? 'true':'false'));
+  const t = document.getElementById('tilt');
+  if(reduceMotion || !t.animate){ state.color = b.dataset.color; update(); return; }
+  t.animate([{ transform:'rotateY(0deg)' }, { transform:'rotateY(90deg) scale(.92)' }], { duration:260, easing:'ease-in' }).onfinish = () => {
+    state.color = b.dataset.color; update();
+    t.animate([{ transform:'rotateY(-90deg) scale(.92)' }, { transform:'rotateY(0deg)' }], { duration:420, easing:'cubic-bezier(.2,.7,.2,1)' });
+  };
+}));
+document.querySelectorAll('.opt').forEach(b => b.addEventListener('click', () => {
+  state.model = b.dataset.model;
+  document.querySelectorAll('.opt').forEach(x => x.setAttribute('aria-pressed', x===b ? 'true':'false'));
+  update();
+}));
+document.getElementById('bizName').addEventListener('input', e => { state.name = e.target.value; update(); });
+document.getElementById('minus').addEventListener('click', () => { state.qty = Math.max(1, state.qty-1); update(); });
+document.getElementById('plus').addEventListener('click', () => { state.qty = Math.min(99, state.qty+1); update(); });
+document.getElementById('builder').addEventListener('submit', e => e.preventDefault());
+
+function update(){
+  drawRealPlate(plateCanvas, state);
+  const unit = PRICES[state.model];
+  const off = state.qty >= 10 ? .2 : state.qty >= 3 ? .1 : 0;
+  const total = unit * state.qty * (1-off);
+  document.getElementById('qty').textContent = state.qty;
+  document.getElementById('price').textContent = fmtBRL(total);
+  const modelName = state.model === 'padrao' ? 'padrão' : 'personalizada';
+  document.getElementById('priceNote').textContent = `${state.qty} ${state.qty>1?'placas':'placa'} ${modelName}${state.qty>1?'s':''}` + (off ? ` · ${off*100}% de desconto` : '');
+  document.querySelectorAll('.js-bizname').forEach(n => n.textContent = (state.name.trim() || 'Sua empresa'));
+  const colorName = state.color === 'preta' ? 'na cor preta e branca' : 'na cor azul e branca';
+  const msg = `Olá! Quero ${state.qty} ${state.qty>1?'placas':'placa'} NFC ${modelName} ${colorName} para "${state.name.trim() || 'minha empresa'}". Total estimado: ${fmtBRL(total)}.`;
+  document.getElementById('orderBtn').href = waLink(msg);
+}
+document.querySelectorAll('.js-wa').forEach(a => {
+  if(a.id === 'orderBtn') return;
+  a.href = waLink(a.dataset.plan ? `Olá! Tenho interesse no plano ${a.dataset.plan} das placas NFC rctag.` : 'Olá! Quero saber mais sobre as placas NFC rctag.');
+});
+(function showNumber(){
+  const d = WHATSAPP.replace(/\D/g,'');
+  if(/^0+$/.test(d.slice(2))) return;
+  const n = d.slice(2); document.getElementById('waNum').textContent = `(${n.slice(0,2)}) ${n.slice(2,-4)}-${n.slice(-4)}`;
+})();
+
+// 3D tilt on the preview
+(function(){
+  const pv = document.getElementById('preview'), t = document.getElementById('tilt');
+  if(reduceMotion) return;
+  const move = (x,y) => {
+    const r = pv.getBoundingClientRect();
+    const px = (x - r.left)/r.width - .5, py = (y - r.top)/r.height - .5;
+    t.style.transform = `rotateY(${px*26}deg) rotateX(${-py*22}deg) translateZ(10px)`;
+  };
+  pv.addEventListener('pointermove', e => move(e.clientX, e.clientY));
+  pv.addEventListener('pointerleave', () => { t.style.transform = 'rotateY(-12deg) rotateX(6deg)'; });
+  t.style.transform = 'rotateY(-12deg) rotateX(6deg)';
+})();
+
+/* ---------- tap demo ---------- */
+(function(){
+  const phone = document.getElementById('phone');
+  const states = [...phone.querySelectorAll('.state')];
+  const show = s => states.forEach(el => el.hidden = el.dataset.s !== s);
+  const stars = [...phone.querySelectorAll('.rv-stars button')];
+  const send = phone.querySelector('.rv-send');
+  let t0 = 0, rating = 0, timer = null;
+  const setStars = v => stars.forEach(b => b.classList.toggle('lit', +b.dataset.v <= v));
+  stars.forEach(b => {
+    b.addEventListener('mouseenter', () => setStars(+b.dataset.v));
+    b.addEventListener('mouseleave', () => setStars(rating));
+    b.addEventListener('click', () => { rating = +b.dataset.v; setStars(rating); send.disabled = false; });
+  });
+  send.addEventListener('click', () => {
+    document.querySelector('.js-secs').textContent = Math.max(3, Math.round((performance.now()-t0)/1000));
+    show('done');
+  });
+  document.getElementById('tapBtn').addEventListener('click', () => {
+    clearTimeout(timer); rating = 0; setStars(0); send.disabled = true; show('idle');
+    phone.classList.add('tapping'); t0 = performance.now();
+    phone.querySelector('[data-s="idle"] .rv-name').textContent = 'Lendo a placa…';
+    timer = setTimeout(() => { phone.classList.remove('tapping'); show('review'); }, reduceMotion ? 200 : 1400);
+  });
+  document.getElementById('resetBtn').addEventListener('click', () => {
+    clearTimeout(timer); phone.classList.remove('tapping'); rating = 0; setStars(0); send.disabled = true;
+    phone.querySelector('[data-s="idle"] .rv-name').textContent = 'Pronto para ler'; show('idle');
+  });
+})();
+
+/* ---------- demo phone: 3D tilt toward the pointer ---------- */
+(function(){
+  const sec = document.getElementById('como-funciona'), stage = document.getElementById('phoneStage'), phone = document.getElementById('phone');
+  if(!sec || reduceMotion || !window.matchMedia('(hover: hover)').matches) return;
+  sec.addEventListener('pointermove', e => {
+    const r = stage.getBoundingClientRect();
+    const x = Math.max(-1, Math.min(1, (e.clientX - (r.left + r.width/2)) / r.width));
+    const y = Math.max(-1, Math.min(1, (e.clientY - (r.top + r.height/2)) / r.height));
+    phone.style.transform = `rotateY(${-16 + x*24}deg) rotateX(${6 - y*14}deg)`;
+    phone.style.setProperty('--sx', (30 + x*50) + '%');
+  });
+  sec.addEventListener('pointerleave', () => { phone.style.transform = ''; phone.style.removeProperty('--sx'); });
+})();
+
+/* ---------- calculator ---------- */
+(function(){
+  const v = document.getElementById('visits'), d = document.getElementById('days'), r = document.getElementById('rate');
+  const bars = document.getElementById('bars');
+  for(let i=0;i<6;i++) bars.appendChild(document.createElement('i'));
+  const run = () => {
+    const per = Math.round(+v.value * +d.value * +r.value);
+    document.getElementById('visitsOut').textContent = `${v.value} clientes por dia`;
+    document.getElementById('daysOut').textContent = `${d.value} dias`;
+    document.getElementById('perMonth').innerHTML = `${per.toLocaleString('pt-BR')}<small>por mês</small>`;
+    document.getElementById('sixMonths').textContent = (per*6).toLocaleString('pt-BR');
+    [...bars.children].forEach((b,i) => b.style.height = ((i+1)/6*100) + '%');
+  };
+  [v,d,r].forEach(el => el.addEventListener('input', run)); run();
+})();
+
+/* =====================================================================
+   SCROLL-WORLD FLIGHT
+   Uma câmera voa por 5 dioramas enquanto a página rola. É renderizado ao
+   vivo em WebGL (three.js), então não depende de vídeos. Para trocar por
+   vídeos gerados (pipeline scroll-world), use references/scrub-engine.js
+   com os mesmos 5 capítulos.
+   ===================================================================== */
+let world = null;
+(function(){
+  const flight = document.querySelector('.flight');
+  const track = flight.querySelector('.track');
+  const canvas = document.getElementById('world');
+  const copies = [...flight.querySelectorAll('.copy')];
+  const railBtns = [...flight.querySelectorAll('.rail button')];
+  const hint = flight.querySelector('.hint');
+  const bar = flight.querySelector('.progress b');
+  const N = 5;
+  const stage = flight.querySelector('.stage');
+  const topBar = document.querySelector('.top');
+  const clamp01 = x => Math.min(1, Math.max(0, x));
+
+  /* ---- chapter videos ----------------------------------------------------
+     Chapters: Balcão, Toque, Avaliação, Mapa, A placa. A clip covers one or more
+     consecutive chapters and is scrubbed by scroll; chapters without a clip keep
+     the live 3D flight. Consecutive Flow videos are joined into one clip with
+     ffmpeg (trimmed, zoom-matched, crossfaded) so there is no stop between them.
+     keys = clip position (0..1) at: where the clip starts showing, the middle of
+     each chapter's hold, and where it has faded out. The clip keeps moving
+     through the holds, so it never freezes while you scroll. */
+  const CHAPTER_VIDEOS = [
+    { chapters:[0,1,2,3,4], src:'video/cenas.mp4', srcMobile:'video/cenas-m.mp4', srcWebm:'video/cenas.webm', poster:'video/cenas.jpg',
+      keys:[0, .125, .33, .524, .744, .974, 1] },
+  ];
+  const isMobile = () => window.matchMedia('(max-width: 860px), (hover: none) and (pointer: coarse)').matches;
+  const vids = CHAPTER_VIDEOS.map(c => {
+    const first = c.chapters[0], last = c.chapters[c.chapters.length-1];
+    const wrap = document.createElement('div'); wrap.className = 'vlayer';
+    const img = new Image(); img.alt = ''; img.loading = first === 0 ? 'eager' : 'lazy'; img.src = c.poster; wrap.appendChild(img);
+    return { c, first, last, wrap, video:null, loading:false, ready:false, cur:c.keys[0], target:c.keys[0], pts:null };
+  });
+  { let after = canvas; vids.forEach(v => { after.after(v.wrap); after = v.wrap; }); }
+  function loadVid(v){
+    if(v.loading || reduceMotion) return;
+    v.loading = true;
+    const probe = document.createElement('video');
+    const mp4ok = probe.canPlayType('video/mp4; codecs="avc1.640028"') !== '';
+    const url = !mp4ok && v.c.srcWebm ? v.c.srcWebm : (isMobile() && v.c.srcMobile ? v.c.srcMobile : v.c.src);
+    // Loaded as a Blob so every frame is seekable on any host.
+    fetch(url).then(r => r.ok ? r.blob() : Promise.reject(new Error(r.status)))
+      .then(blob => {
+        const el = document.createElement('video');
+        el.muted = true; el.playsInline = true; el.preload = 'auto';
+        el.setAttribute('muted',''); el.setAttribute('playsinline','');
+        el.src = URL.createObjectURL(blob);
+        el.addEventListener('loadedmetadata', () => { v.ready = true; });
+        el.addEventListener('seeked', () => v.wrap.classList.add('has-video'), { once:true });
+        v.wrap.appendChild(el); v.video = el;
+      }).catch(() => { v.loading = false; });
+  }
+  const inU = v => v.first === 0 ? 0 : 2*v.first - .4;     // starts fading in
+  const outU = v => 2*v.last + 1.05;                         // starts fading out
+  function updateVideos(u, p){
+    let cover = 0;
+    vids.forEach((v,k) => {
+      const next = vids[k+1], joined = next && next.first === v.last + 1;
+      const fin = v.first === 0 ? 1 : clamp01((u - inU(v)) / .45);
+      const fout = joined ? (u > 2*next.first - .7 ? 0 : 1) : 1 - clamp01((u - outU(v)) / .55);
+      const op = Math.min(fin, fout);
+      v.wrap.style.opacity = op;
+      v.wrap.style.visibility = op > .001 ? 'visible' : 'hidden';
+      v.wrap.style.zIndex = String(1 + v.first);
+      if(u > 2*v.first - 2 && u < 2*v.last + 2.5) loadVid(v);
+      // Clip time follows scroll progress through the keys (piecewise linear).
+      if(!v.pts) v.pts = [pOfU(inU(v))].concat(v.c.chapters.map(i => stationP[i]), [pOfU(outU(v) + .55)]);
+      const P = v.pts, K = v.c.keys;
+      let t = p <= P[0] ? K[0] : K[K.length-1];
+      for(let j = 0; j < P.length-1; j++) if(p > P[j] && p <= P[j+1]){ t = K[j] + (K[j+1]-K[j]) * (p - P[j]) / (P[j+1] - P[j]); break; }
+      v.target = t;
+      cover = Math.max(cover, op);
+    });
+    const dark = cover > .5;
+    stage.classList.toggle('on-video', dark);
+    topBar.classList.toggle('on-video', dark && flight.getBoundingClientRect().bottom > 64);
+  }
+  (function scrub(){
+    vids.forEach(v => {
+      if(!v.ready || !v.video || v.video.seeking) return;
+      v.cur += (v.target - v.cur) * (reduceMotion ? 1 : .2);
+      const t = Math.min(.999, Math.max(0, v.cur)) * (v.video.duration || 1);
+      if(Math.abs(v.video.currentTime - t) > (isMobile() ? .04 : .015)){ try { v.video.currentTime = t; } catch(e){} }
+    });
+    requestAnimationFrame(scrub);
+  })();
+  // iOS paints a muted video only after it has played once: prime on first touch.
+  window.addEventListener('touchstart', () => vids.forEach(v => {
+    if(v.video){ const pr = v.video.play(); if(pr && pr.then) pr.then(() => v.video.pause()).catch(() => {}); }
+  }), { once:true, passive:true });
+
+  // Timeline: approach, then per station a hold and a transit (in/out halves).
+  const SEGS = [{a:0,b:1,L:.8,e:'out'}];
+  for(let i=0;i<N;i++){
+    SEGS.push({a:2*i+1,b:2*i+1,L:i===N-1?.5:.7});
+    if(i<N-1){ SEGS.push({a:2*i+1,b:2*i+2,L:.6,e:'in'}); SEGS.push({a:2*i+2,b:2*i+3,L:.6,e:'out'}); }
+  }
+  const TOTAL = SEGS.reduce((s,x)=>s+x.L,0);
+  track.style.height = (TOTAL*95) + 'vh';
+  const stationP = [];   // scroll progress at the middle of each hold
+  { let acc=0; SEGS.forEach(s => { if(s.a===s.b) stationP[(s.a-1)/2] = (acc + s.L*.5)/TOTAL; acc += s.L; }); }
+  function uAt(p){
+    let x = p*TOTAL;
+    for(const s of SEGS){
+      if(x <= s.L){ const f = s.L ? x/s.L : 1; const e = s.e==='in' ? f*f : s.e==='out' ? 1-(1-f)*(1-f) : 0; return s.a + (s.b-s.a)*e; }
+      x -= s.L;
+    }
+    return 2*N-1;
+  }
+  function pOfU(u){   // inverse of uAt (uAt never decreases)
+    let lo = 0, hi = 1;
+    for(let k = 0; k < 30; k++){ const m = (lo+hi)/2; if(uAt(m) < u) lo = m; else hi = m; }
+    return hi;
+  }
+  function progress(){
+    const r = flight.getBoundingClientRect();
+    const span = flight.offsetHeight - window.innerHeight;
+    return Math.min(1, Math.max(0, -r.top / Math.max(1, span)));
+  }
+  function jump(i){
+    const top = flight.offsetTop + stationP[i]*(flight.offsetHeight - window.innerHeight);
+    window.scrollTo({ top, behavior: reduceMotion ? 'auto' : 'smooth' });
+  }
+  railBtns.forEach(b => b.addEventListener('click', () => jump(+b.dataset.go)));
+
+  function updateCopy(u){
+    let active = 0, best = 9;
+    copies.forEach((c,i) => {
+      const dist = i===0 && u<1 ? 0 : Math.abs(u-(2*i+1));
+      if(dist < best){ best = dist; active = i; }
+      const op = Math.max(0, Math.min(1, 1 - (dist-.3)/.55));
+      c.style.opacity = op;
+      c.classList.toggle('on', op > .6);
+      c.setAttribute('aria-hidden', op > .6 ? 'false' : 'true');
+    });
+    railBtns.forEach((b,i) => b.classList.toggle('on', i===active));
+  }
+
+  let gl = null;
+  try { gl = window.THREE && (canvas.getContext('webgl2') || canvas.getContext('webgl')); } catch(e){}
+  if(!gl){
+    // No WebGL: the copy still steps through the chapters as you scroll.
+    flight.classList.add('nogl');
+    const onScroll = () => { const p = progress(); updateCopy(uAt(p)); updateVideos(uAt(p), p); bar.style.transform = `scaleX(${p})`; hint.style.opacity = p > .02 ? 0 : 1; };
+    window.addEventListener('scroll', onScroll, { passive:true }); onScroll();
+    return;
+  }
+
+  const THREE = window.THREE;
+  const renderer = new THREE.WebGLRenderer({ canvas, context: gl, antialias:true, alpha:true });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(40, 1, .1, 500);
+  scene.add(new THREE.HemisphereLight(0xffffff, 0x7d8ca6, .62));
+  const sun = new THREE.DirectionalLight(0xfff4e0, .62); sun.position.set(30, 60, 40); scene.add(sun);
+  const fill = new THREE.DirectionalLight(0xcfe0ff, .3); fill.position.set(-40, 20, -20); scene.add(fill);
+
+  const mat = (c, extra) => new THREE.MeshStandardMaterial(Object.assign({ color:c, roughness:.82, metalness:0, flatShading:true }, extra||{}));
+  const M = {
+    wood: mat(0xC98B5A), woodLight: mat(0xE2B384), cream: mat(0xF3EDE2), ink: mat(0x14213D),
+    gold: mat(0xF2A900, { emissive:0x6b4a00, emissiveIntensity:.35, roughness:.5 }), blue: mat(0x2F6FEB),
+    red: mat(0xE4574B), leaf: mat(0x5BAA7A), leafDark: mat(0x3E8A60), rock: mat(0x8C9BB0), dirt: mat(0x7A6A5C),
+    white: mat(0xFFFFFF), glass: mat(0xDDEAF5, { transparent:true, opacity:.55, roughness:.1 }),
+  };
+  const STX = 46;
+  const centers = [0,1,2,3,4].map(i => new THREE.Vector3(i*STX, 0, (i%2 ? -8 : 0)));
+  const tops = [0x8FCB9E, 0xE8C98F, 0x9DBCF5, 0xB9CBB0, 0xEBC66A];
+
+  function island(i){
+    const g = new THREE.Group(); g.position.copy(centers[i]);
+    const top = new THREE.Mesh(new THREE.CylinderGeometry(9, 8.4, 1.6, 10), mat(tops[i])); top.position.y = .8; g.add(top);
+    const soil = new THREE.Mesh(new THREE.CylinderGeometry(8.4, 7.2, 1.6, 10), M.dirt); soil.position.y = -.8; g.add(soil);
+    const under = new THREE.Mesh(new THREE.ConeGeometry(7.2, 7, 10), M.rock); under.rotation.x = Math.PI; under.position.y = -5.1; g.add(under);
+    scene.add(g); return g;
+  }
+  function box(w,h,d,m,x,y,z,parent){ const o = new THREE.Mesh(new THREE.BoxGeometry(w,h,d), m); o.position.set(x,y,z); parent.add(o); return o; }
+  function cyl(rt,rb,h,m,x,y,z,parent,seg){ const o = new THREE.Mesh(new THREE.CylinderGeometry(rt,rb,h,seg||10), m); o.position.set(x,y,z); parent.add(o); return o; }
+  function tree(parent,x,z,s){ s=s||1; cyl(.25*s,.3*s,1.6*s,M.wood,x,1.6+.8*s,z,parent,6); const c = new THREE.Mesh(new THREE.IcosahedronGeometry(1.3*s,0), M.leaf); c.position.set(x,1.6+2.3*s,z); parent.add(c); }
+  function starShape(r){ const s = new THREE.Shape(); for(let k=0;k<10;k++){ const a = Math.PI/2 + k*Math.PI/5, rr = k%2 ? r*.45 : r; const x = Math.cos(a)*rr, y = Math.sin(a)*rr; k ? s.lineTo(x,y) : s.moveTo(x,y);} s.closePath(); return s; }
+  const starGeo = new THREE.ExtrudeGeometry(starShape(1), { depth:.35, bevelEnabled:true, bevelThickness:.08, bevelSize:.08, bevelSegments:1 });
+  starGeo.center();
+
+  // every 3D plate wears the real rctag plate photo
+  const plateTex = new THREE.Texture(PLATE_IMG); plateTex.anisotropy = 8;
+  if(PLATE_IMG.complete && PLATE_IMG.naturalWidth) plateTex.needsUpdate = true;
+  const faceMat = new THREE.MeshStandardMaterial({ map: plateTex, roughness:.3, transparent:true, alphaTest:.3 });
+  function plate(parent, s, x, y, z){
+    const g = new THREE.Group(); g.position.set(x,y,z); g.scale.setScalar(s);
+    const edge = M.glass;
+    const body = new THREE.Mesh(new THREE.BoxGeometry(2.2, 1.86, .09), [edge,edge,edge,edge,faceMat,edge]); body.position.y = 1.06; body.rotation.x = -.1; g.add(body);
+    const foot = new THREE.Mesh(new THREE.BoxGeometry(2.1,.14,.7), M.glass); foot.position.y = .07; g.add(foot);
+    parent.add(g); return g;
+  }
+
+  // Station 0: café counter
+  const s0 = island(0);
+  box(9,2.2,2.6,M.wood,0,2.7,-1,s0); box(9.4,.3,3,M.woodLight,0,3.95,-1,s0);
+  box(1.6,1.4,1.2,M.ink,-3.2,4.8,-1.4,s0); box(1.2,.4,.9,M.cream,-3.2,5.7,-1.4,s0);
+  cyl(.28,.22,.55,M.cream,-1.6,4.38,-.6,s0); cyl(.28,.22,.55,M.cream,2.7,4.38,-.3,s0);
+  const plate0 = plate(s0, 1, .6, 4.1, -.4);
+  [-2.4,0,2.4].forEach(x => { cyl(.12,.12,1.6,M.ink,x,2.4,1.6,s0,6); cyl(.7,.7,.2,M.red,x,3.25,1.6,s0); });
+  box(10,5,.4,M.cream,0,4.1,-4.6,s0); box(3,1.6,.1,M.ink,-2.6,5.4,-4.35,s0); box(3,1.6,.1,M.ink,1,5.4,-4.35,s0);
+  tree(s0,-6.5,1.5,1); tree(s0,6.2,-2.4,1.2);
+  const cup = s0; // eslint quiet
+
+  // Station 1: the tap
+  const s1 = island(1);
+  cyl(2.4,2.8,1.8,M.cream,0,2.5,0,s1,12);
+  const plate1 = plate(s1, 1.9, 0, 3.4, 0);
+  const phone = new THREE.Group(); s1.add(phone);
+  box(1.9,3.8,.28,M.ink,0,0,0,phone);
+  const scr = box(1.7,3.4,.02,new THREE.MeshStandardMaterial({ color:0x2F6FEB, emissive:0x1b3f9a, emissiveIntensity:.6, roughness:.3 }),0,0,.15,phone);
+  const rings = [0,1,2].map(k => { const m = new THREE.MeshBasicMaterial({ color:0x2F6FEB, transparent:true, opacity:.8 }); const r = new THREE.Mesh(new THREE.TorusGeometry(1.4,.07,8,48), m); r.position.set(0,5.9,.9); s1.add(r); return r; });
+  tree(s1,-6.4,-2,1.1); tree(s1,6,2.5,.9);
+  box(1.4,.6,1.4,M.leafDark,5,1.9,-3,s1);
+
+  // Station 2: the review
+  const s2 = island(2);
+  const bigPhone = new THREE.Group(); bigPhone.position.set(0,1.6,0); s2.add(bigPhone);
+  box(6,11,.6,M.ink,0,6,-1.5,bigPhone);
+  box(5.4,10.2,.05,mat(0xFFFFFF,{emissive:0xffffff,emissiveIntensity:.35}),0,6,-1.18,bigPhone);
+  box(3.6,.5,.06,M.ink,0,9.6,-1.14,bigPhone); box(2.4,.3,.06,M.rock,0,8.9,-1.14,bigPhone);
+  box(4.4,2.2,.06,mat(0xE9EEF2),0,3.7,-1.14,bigPhone); box(2.4,.7,.06,M.blue,0,1.9,-1.14,bigPhone);
+  const stars2 = [0,1,2,3,4].map(k => { const s = new THREE.Mesh(starGeo, M.gold); s.position.set((k-2)*1.15, 7.1, -.7); s.scale.setScalar(.001); bigPhone.add(s); return s; });
+  tree(s2,-6.6,1,1); tree(s2,6.4,-1.8,1.1); tree(s2,5.4,3.4,.8);
+
+  // Station 3: the map
+  const s3 = island(3);
+  const mapC = document.createElement('canvas'); mapC.width = mapC.height = 512;
+  { const c = mapC.getContext('2d'); c.fillStyle = '#E3EAE0'; c.fillRect(0,0,512,512);
+    c.fillStyle = '#BFD8B8'; c.fillRect(300,40,160,130); c.fillRect(40,330,140,140);
+    c.fillStyle = '#A9CBE8'; c.beginPath(); c.moveTo(0,250); c.bezierCurveTo(160,210,300,300,512,260); c.lineTo(512,290); c.bezierCurveTo(300,330,160,240,0,280); c.fill();
+    c.strokeStyle = '#FFFFFF'; c.lineWidth = 18; [[0,120,512,150],[0,420,512,380],[140,0,110,512],[380,0,420,512]].forEach(l => { c.beginPath(); c.moveTo(l[0],l[1]); c.lineTo(l[2],l[3]); c.stroke(); });
+    c.strokeStyle = '#F6D98A'; c.lineWidth = 8; c.beginPath(); c.moveTo(0,120); c.lineTo(512,150); c.stroke(); }
+  const mapTex = new THREE.CanvasTexture(mapC);
+  const mapPlane = new THREE.Mesh(new THREE.BoxGeometry(11.4,.12,11.4), [M.cream,M.cream,new THREE.MeshStandardMaterial({ map:mapTex, roughness:.9 }),M.cream,M.cream,M.cream]);
+  mapPlane.position.y = 1.66; s3.add(mapPlane);
+  function pin(parent,x,z,m,s){ const g = new THREE.Group(); g.position.set(x,1.7,z); g.scale.setScalar(s||1); const c = new THREE.Mesh(new THREE.ConeGeometry(.45,1.3,12), m); c.rotation.x = Math.PI; c.position.y = .65; g.add(c); const h = new THREE.Mesh(new THREE.SphereGeometry(.55,14,10), m); h.position.y = 1.45; g.add(h); parent.add(g); return g; }
+  [[-3.5,-2.5],[3.4,-3.2],[-2.8,3.4],[3.8,2.6],[-4.4,.6]].forEach(p => pin(s3,p[0],p[1],M.rock,.8));
+  const heroPin = pin(s3, .4, .2, M.gold, 1.1);
+  const heroStar = new THREE.Mesh(starGeo, M.gold); heroStar.scale.setScalar(.6); heroPin.add(heroStar);
+  [[-4.5,-4.6,1.6],[4.6,-4.4,2.2],[-4.8,4.2,1.2],[4.9,4.5,1.8]].forEach(b => box(1.2,b[2],1.2,M.cream,b[0],1.7+b[2]/2,b[1],s3));
+
+  // Station 4: the product
+  const s4 = island(4);
+  cyl(3.2,3.6,1.2,M.cream,0,2.2,0,s4,24);
+  const hero = new THREE.Group(); hero.position.set(0,2.8,0); s4.add(hero);
+  const heroPlate = plate(hero, 2.7, 0, 0, 0);
+  const orbit = [0,1,2,3,4,5].map(k => { const s = new THREE.Mesh(starGeo, M.gold); s.scale.setScalar(.35); s4.add(s); return s; });
+  tree(s4,-6.2,-2.6,1.2); tree(s4,6.4,-1.6,1);
+
+  // clouds + motes
+  const cloudMat = new THREE.MeshStandardMaterial({ color:0xffffff, emissive:0xffffff, emissiveIntensity:.25, roughness:1, flatShading:true, transparent:true, opacity:.9 });
+  const clouds = [];
+  const rnd = seeded(7);
+  for(let k=0;k<22;k++){
+    const g = new THREE.Group();
+    for(let j=0;j<3+Math.floor(rnd()*3);j++){ const m = new THREE.Mesh(new THREE.IcosahedronGeometry(1.5+rnd()*1.6,0), cloudMat); m.position.set(j*1.9 - 2, rnd()*.8, rnd()*1.2); g.add(m); }
+    g.position.set(-30 + rnd()*(STX*4+60), 10 + rnd()*26, -75 + rnd()*45);
+    g.userData.v = .2 + rnd()*.4; scene.add(g); clouds.push(g);
+  }
+
+  // camera path
+  let posCurve, lookCurve;
+  function buildPath(){
+    const aspect = canvas.clientWidth / Math.max(1, canvas.clientHeight);
+    const portrait = aspect < .9, k = portrait ? 1.75 : 1;
+    camera.fov = portrait ? 52 : 40;
+    const shiftX = portrait ? 0 : -3.2; // desktop: frame subject right of the copy
+    const P = [], L = [];
+    const NEAR = [[14,7,4.2],[17,8,5.4],[24,9,7.8],[17,15,2.6],[19,8,5.6]]; // [distance, height, look height]
+    const dropY = portrait ? -3.5 : 0; // phones: aim lower so the scene sits above the copy
+    const nearOf = i => centers[i].clone().add(new THREE.Vector3(shiftX, NEAR[i][1], NEAR[i][0]*k));
+    const lookOf = i => centers[i].clone().add(new THREE.Vector3(shiftX, NEAR[i][2] + dropY, 0));
+    P.push(centers[0].clone().add(new THREE.Vector3(shiftX*2, 22, 40*k))); L.push(centers[0].clone().add(new THREE.Vector3(shiftX, 2 + dropY, 0)));
+    for(let i=0;i<N;i++){
+      P.push(nearOf(i)); L.push(lookOf(i));
+      if(i<N-1){
+        const mid = centers[i].clone().lerp(centers[i+1], .5);
+        P.push(mid.clone().add(new THREE.Vector3(0, 21, 26*k))); L.push(mid.clone().add(new THREE.Vector3(8, 0, -6)));
+      }
+    }
+    posCurve = new THREE.CatmullRomCurve3(P, false, 'centripetal');
+    lookCurve = new THREE.CatmullRomCurve3(L, false, 'centripetal');
+    camera.updateProjectionMatrix();
+  }
+
+  function resize(){
+    const w = canvas.clientWidth, h = canvas.clientHeight;
+    renderer.setSize(w, h, false); camera.aspect = w / Math.max(1,h); buildPath();
+  }
+  function applyTheme(){
+    const cs = getComputedStyle(document.documentElement);
+    const fog = cs.getPropertyValue('--fog').trim() || '#E3EBF2';
+    scene.fog = new THREE.Fog(new THREE.Color(fog), 70, 190);
+    const dark = cs.getPropertyValue('color-scheme').includes('dark');
+    cloudMat.color.set(dark ? 0x42506b : 0xffffff); cloudMat.emissiveIntensity = dark ? 0 : .25; cloudMat.opacity = dark ? .55 : .9;
+  }
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyTheme);
+  new MutationObserver(applyTheme).observe(document.documentElement, { attributes:true, attributeFilter:['data-theme'] });
+
+  let uCur = uAt(progress()), uTarget = uCur, last = performance.now();
+  const tmpP = new THREE.Vector3(), tmpL = new THREE.Vector3();
+  function frame(now){
+    const dt = Math.min(.05, (now-last)/1000); last = now; const t = now/1000;
+    const p = progress(); uTarget = uAt(p);
+    uCur += (uTarget - uCur) * (reduceMotion ? 1 : Math.min(1, dt*6));
+    const tt = uCur / (2*N-1);
+    posCurve.getPoint(tt, tmpP); lookCurve.getPoint(tt, tmpL);
+    camera.position.copy(tmpP); camera.lookAt(tmpL);
+    const closeness = i => Math.max(0, 1 - Math.abs(uCur-(2*i+1))/1.4);
+
+    if(!reduceMotion){
+      // station 1: phone glides toward the plate and rings pulse
+      const ph = (Math.sin(t*1.6)+1)/2;
+      phone.position.set(1.8 - ph*.9, 6.2, 4 - ph*2.2); phone.rotation.set(-.25, -.5 + ph*.25, -.1);
+      rings.forEach((r,k) => { const f = ((t*.8 + k/3) % 1); r.scale.setScalar(.6 + f*1.6); r.material.opacity = (1-f)*.8*ph; });
+      scr.material.emissiveIntensity = .4 + ph*.6;
+      heroPlate.rotation.y = Math.sin(t*.5)*.5;
+      orbit.forEach((s,k) => { const a = t*.6 + k*Math.PI/3; s.position.set(Math.cos(a)*5.2, 6 + Math.sin(a*2)*.8, Math.sin(a)*5.2); s.rotation.y = t*2 + k; });
+      clouds.forEach(c => { c.position.x += c.userData.v*dt; if(c.position.x > STX*4+40) c.position.x = -40; });
+      plate0.rotation.y = Math.sin(t*.8)*.08;
+      heroStar.rotation.y = t*1.5;
+    } else {
+      rings.forEach((r,k) => { r.scale.setScalar(1 + k*.4); r.material.opacity = .4; });
+      phone.position.set(2, 6.2, 3); phone.rotation.set(-.25,-.4,-.1);
+      orbit.forEach((s,k) => { const a = k*Math.PI/3; s.position.set(Math.cos(a)*5.2, 6, Math.sin(a)*5.2); });
+    }
+    // station 2: stars pop in one by one as the camera arrives
+    const c2 = closeness(2);
+    stars2.forEach((s,k) => { const f = Math.max(0, Math.min(1, (c2 - k*.1)/.35)); const b = f<1 ? f*(1 + .3*Math.sin(f*Math.PI)) : 1; s.scale.setScalar(Math.max(.001, b*.55)); s.rotation.y = (1-f)*Math.PI; });
+    // station 3: your pin rises above the others
+    const c3 = closeness(3);
+    heroPin.position.y = 1.7 + c3*2.6; heroPin.scale.setScalar(1.1 + c3*.5); heroStar.position.y = 2.6;
+
+    renderer.render(scene, camera);
+    updateCopy(uCur);
+    updateVideos(uCur, p);
+    bar.style.transform = `scaleX(${p})`;
+    hint.style.opacity = p > .02 ? 0 : 1;
+    requestAnimationFrame(frame);
+  }
+
+  world = { plateReady: () => { plateTex.needsUpdate = true; } };
+  applyTheme(); resize();
+  window.addEventListener('resize', resize);
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(update);
+  requestAnimationFrame(frame);
+})();
+
+update();
+</script>
+
+</body>
+</html>
