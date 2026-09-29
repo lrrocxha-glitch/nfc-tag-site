@@ -1,133 +1,359 @@
-/* =====================================================================
-   rctag — efeitos compartilhados por todas as páginas
-   WHATSAPP: troque pelo número real (DDI + DDD + número, só dígitos).
-   ===================================================================== */
-window.RCTAG = window.RCTAG || {};
-RCTAG.whatsapp = '5561983544077';   // (61) 98354-4077
-RCTAG.reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-RCTAG.waLink = text => 'https://wa.me/' + RCTAG.whatsapp + '?text=' + encodeURIComponent(text);
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
 
-document.addEventListener('DOMContentLoaded', () => {
-  // WhatsApp buttons that the page did not set up itself
-  document.querySelectorAll('.js-wa').forEach(a => {
-    if(a.getAttribute('href') && a.getAttribute('href') !== '#') return;
-    const plan = a.dataset.plan;
-    a.href = RCTAG.waLink(plan ? `Olá! Quero a placa rctag, plano ${plan}.` : 'Olá! Quero saber mais sobre a placa rctag.');
-  });
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1425731839693996');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1425731839693996&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body>
+<header class="top">
+<div class="wrap">
+<a class="brand" href="index.html" aria-label="rctag, início">
+<span class="logo3d" aria-hidden="true"><svg class="l-side" viewBox="0 0 64 64" style="--z:-7.8px"><path d="M4 32 L16.5 15.5 Q18 14 20.5 14 H53 Q58 14 58 19 V45 Q58 50 53 50 H20.5 Q18 50 16.5 48.5 Z M17.5 28.6 A3.4 3.4 0 1 0 17.5 35.4 A3.4 3.4 0 1 0 17.5 28.6 Z" fill="#6B4100" fill-rule="evenodd"/></svg><svg class="l-side" viewBox="0 0 64 64" style="--z:-6.5px"><path d="M4 32 L16.5 15.5 Q18 14 20.5 14 H53 Q58 14 58 19 V45 Q58 50 53 50 H20.5 Q18 50 16.5 48.5 Z M17.5 28.6 A3.4 3.4 0 1 0 17.5 35.4 A3.4 3.4 0 1 0 17.5 28.6 Z" fill="#7E4D00" fill-rule="evenodd"/></svg><svg class="l-side" viewBox="0 0 64 64" style="--z:-5.2px"><path d="M4 32 L16.5 15.5 Q18 14 20.5 14 H53 Q58 14 58 19 V45 Q58 50 53 50 H20.5 Q18 50 16.5 48.5 Z M17.5 28.6 A3.4 3.4 0 1 0 17.5 35.4 A3.4 3.4 0 1 0 17.5 28.6 Z" fill="#935A00" fill-rule="evenodd"/></svg><svg class="l-side" viewBox="0 0 64 64" style="--z:-3.9px"><path d="M4 32 L16.5 15.5 Q18 14 20.5 14 H53 Q58 14 58 19 V45 Q58 50 53 50 H20.5 Q18 50 16.5 48.5 Z M17.5 28.6 A3.4 3.4 0 1 0 17.5 35.4 A3.4 3.4 0 1 0 17.5 28.6 Z" fill="#A86700" fill-rule="evenodd"/></svg><svg class="l-side" viewBox="0 0 64 64" style="--z:-2.6px"><path d="M4 32 L16.5 15.5 Q18 14 20.5 14 H53 Q58 14 58 19 V45 Q58 50 53 50 H20.5 Q18 50 16.5 48.5 Z M17.5 28.6 A3.4 3.4 0 1 0 17.5 35.4 A3.4 3.4 0 1 0 17.5 28.6 Z" fill="#BD7400" fill-rule="evenodd"/></svg><svg class="l-side" viewBox="0 0 64 64" style="--z:-1.3px"><path d="M4 32 L16.5 15.5 Q18 14 20.5 14 H53 Q58 14 58 19 V45 Q58 50 53 50 H20.5 Q18 50 16.5 48.5 Z M17.5 28.6 A3.4 3.4 0 1 0 17.5 35.4 A3.4 3.4 0 1 0 17.5 28.6 Z" fill="#D08000" fill-rule="evenodd"/></svg><svg class="l-front" viewBox="0 0 64 64"><defs><linearGradient id="lgF" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFE08A"/><stop offset=".45" stop-color="#FFC23D"/><stop offset="1" stop-color="#F29A00"/></linearGradient><linearGradient id="lgG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".75"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="lgC"><path d="M4 32 L16.5 15.5 Q18 14 20.5 14 H53 Q58 14 58 19 V45 Q58 50 53 50 H20.5 Q18 50 16.5 48.5 Z M17.5 28.6 A3.4 3.4 0 1 0 17.5 35.4 A3.4 3.4 0 1 0 17.5 28.6 Z" clip-rule="evenodd"/></clipPath></defs><path d="M4 32 L16.5 15.5 Q18 14 20.5 14 H53 Q58 14 58 19 V45 Q58 50 53 50 H20.5 Q18 50 16.5 48.5 Z M17.5 28.6 A3.4 3.4 0 1 0 17.5 35.4 A3.4 3.4 0 1 0 17.5 28.6 Z" fill="url(#lgF)" fill-rule="evenodd"/><g clip-path="url(#lgC)"><path d="M0 0H64V27Q34 36 0 26Z" fill="url(#lgG)"/></g><g fill="none" stroke="#0A1430" stroke-width="3.4" stroke-linecap="round"><path d="M31 25.5a9 9 0 0 1 0 13"/><path d="M37.5 21a15.5 15.5 0 0 1 0 22"/><path d="M44 16.8a21.5 21.5 0 0 1 0 30.4"/></g><circle cx="25.5" cy="32" r="2.6" fill="#0A1430"/></svg></span>
+<span class="wm">rc<b>tag</b></span>
+</a>
+<nav class="nav" id="nav" aria-label="Páginas">
+<a href="index.html">Início</a>
+<a href="produto.html">O produto</a>
+<a href="beneficios.html" aria-current="page">Para o seu negócio</a>
+<a href="index.html#monte">Monte a sua</a>
+<a href="index.html#planos">Planos</a>
+<a class="btn btn-gold js-wa nav-wa" href="#" target="_blank" rel="noopener">Pedir no WhatsApp</a>
+</nav>
+<a class="btn btn-gold js-wa" href="#" target="_blank" rel="noopener">Pedir no WhatsApp</a>
+<button type="button" class="menu-btn" aria-controls="nav" aria-expanded="false" aria-label="Abrir menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</div>
+</header>
 
-  // mobile menu
-  const btn = document.querySelector('.menu-btn'), nav = document.querySelector('.nav');
-  if(btn && nav){
-    const set = open => { nav.classList.toggle('open', open); btn.setAttribute('aria-expanded', open); };
-    btn.addEventListener('click', () => set(!nav.classList.contains('open')));
-    nav.addEventListener('click', e => { if(e.target.closest('a')) set(false); });
-    document.addEventListener('keydown', e => { if(e.key === 'Escape') set(false); });
-  }
 
-  // header turns light-on-dark while it sits over a dark band
-  const top = document.querySelector('.top'), bands = [...document.querySelectorAll('.dark-band')];
-  if(top && bands.length){
-    const chk = () => { const y = 32; top.classList.toggle('on-dark', bands.some(b => { const r = b.getBoundingClientRect(); return r.top <= y && r.bottom > y; })); };
-    window.addEventListener('scroll', chk, { passive:true }); chk();
-  }
+<main>
+<!-- ============ HERO: pino 3D subindo no mapa ============ -->
+<section class="page-hero dark-band" id="topo">
+<canvas class="scene" id="heroScene" aria-label="Pino dourado subindo acima dos outros em um mapa 3D, com cinco estrelas girando ao redor."></canvas>
+<div class="wrap">
+<div class="hero-copy">
+<span class="eyebrow">Para o seu negócio</span>
+<h1>Mais avaliações. Mais gente te encontrando.</h1>
+<p>A placa trabalha no seu balcão o dia inteiro, pedindo avaliação na hora certa. Veja o que isso muda para a sua empresa.</p>
+<div class="row">
+<a class="btn btn-gold js-wa" href="#" target="_blank" rel="noopener">Quero a minha</a>
+<a class="btn btn-ghost" href="#beneficios">Ver os benefícios</a>
+</div>
+</div>
+</div>
+</section>
 
-  // reveal: blocks rise out of depth as they enter
-  const rv = document.querySelectorAll('[data-reveal]');
-  if('IntersectionObserver' in window && !RCTAG.reduceMotion){
-    const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin:'0px 0px -8% 0px' });
-    rv.forEach(el => io.observe(el));
-  } else rv.forEach(el => el.classList.add('in'));
+<!-- ============ O PROBLEMA ============ -->
+<section class="block" id="problema">
+<div class="wrap">
+<div class="head" data-reveal>
+<span class="eyebrow">O problema</span>
+<h2>Cliente satisfeito quase nunca avalia sozinho.</h2>
+<p>Ele gostou, agradeceu e foi embora. Para avaliar depois, teria que lembrar, abrir o Google, procurar sua empresa e achar o botão. Quem costuma fazer esse caminho sozinho é o cliente insatisfeito. A placa inverte isso: pede no momento em que a experiência foi boa, e o caminho vira um toque.</p>
+</div>
+<div class="cards">
+<article class="card" data-tilt="8" data-reveal data-reveal-delay="1">
+<span class="n">SEM A PLACA</span>
+<h3>Cinco passos até avaliar</h3>
+<p>Lembrar, abrir o Google, digitar o nome, achar a empresa, achar o botão. A maioria desiste no caminho.</p>
+</article>
+<article class="card" data-tilt="8" data-reveal data-reveal-delay="2" style="background:linear-gradient(150deg,#1A47C8,#0B1E55);color:#F3F6FB">
+<span class="n" style="color:#C7D2E6">COM A PLACA</span>
+<h3>Um toque</h3>
+<p style="color:#D5DEF0">Encostou o celular, a tela de avaliação da sua empresa já abre com as estrelas prontas para tocar.</p>
+</article>
+<article class="card" data-tilt="8" data-reveal data-reveal-delay="3">
+<span class="n">NA HORA CERTA</span>
+<h3>Ainda no balcão</h3>
+<p>O pedido acontece enquanto o cliente ainda está sorrindo, não dias depois, quando ele já esqueceu.</p>
+</article>
+</div>
+</div>
+</section>
 
-  // tilt: cards lean toward the pointer, with a moving glare
-  if(!RCTAG.reduceMotion && window.matchMedia('(hover: hover)').matches){
-    document.querySelectorAll('[data-tilt]').forEach(el => {
-      const max = +el.dataset.tilt || 10;
-      if(!el.querySelector('.glare-fx')){ const g = document.createElement('i'); g.className = 'glare-fx'; el.appendChild(g); }
-      el.addEventListener('pointermove', e => {
-        const r = el.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
-        el.classList.add('tilting');
-        el.style.transform = `perspective(1000px) rotateX(${(.5 - y) * max}deg) rotateY(${(x - .5) * max}deg) translateZ(0)`;
-        el.style.setProperty('--gx', x*100 + '%'); el.style.setProperty('--gy', y*100 + '%');
-      });
-      el.addEventListener('pointerleave', () => { el.classList.remove('tilting'); el.style.transform = ''; });
-    });
-  }
+<!-- ============ BENEFÍCIOS (flip cards) ============ -->
+<section class="block" id="beneficios" style="padding-top:0">
+<div class="wrap">
+<div class="head" data-reveal>
+<span class="eyebrow">Benefícios</span>
+<h2>O que a placa faz pelo seu negócio.</h2>
+<p>Passe o mouse ou toque em cada cartão para ver como funciona na prática.</p>
+</div>
+<div class="cards">
+<div class="flip" data-reveal data-reveal-delay="1"><div class="inner">
+<div class="face front"><span class="ico card-ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg></span><h3>Mais avaliações, sem esforço</h3><span class="more">Virar ↻</span></div>
+<div class="face back"><b>Menos passos, mais gente avaliando.</b><p>Quando avaliar leva um toque em vez de cinco passos, muito mais clientes satisfeitos chegam até o fim. Sua equipe não precisa insistir.</p></div>
+</div><button type="button" class="flip-t" aria-label="Virar cartão: Mais avaliações, sem esforço"></button></div>
+<div class="flip" data-reveal data-reveal-delay="2"><div class="inner">
+<div class="face front"><span class="ico card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><h3>Mais destaque no Google Maps</h3><span class="more">Virar ↻</span></div>
+<div class="face back"><b>Relevância conta no ranking local.</b><p>Avaliações recentes e em volume ajudam o Google a entender que sua empresa é ativa e bem avaliada, o que ajuda você a aparecer melhor para quem busca por perto.</p></div>
+</div><button type="button" class="flip-t" aria-label="Virar cartão: Mais destaque no Google Maps"></button></div>
+<div class="flip" data-reveal data-reveal-delay="3"><div class="inner">
+<div class="face front"><span class="ico card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></span><h3>Confiança para quem não te conhece</h3><span class="more">Virar ↻</span></div>
+<div class="face back"><b>Quem pesquisa, compara.</b><p>Antes de escolher onde ir, as pessoas olham a nota e leem os comentários. Muitas avaliações recentes passam segurança e fazem o cliente novo escolher você.</p></div>
+</div><button type="button" class="flip-t" aria-label="Virar cartão: Confiança para quem não te conhece"></button></div>
+<div class="flip" data-reveal data-reveal-delay="1"><div class="inner">
+<div class="face front"><span class="ico card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg></span><h3>Feedback real para melhorar</h3><span class="more">Virar ↻</span></div>
+<div class="face back"><b>Seus clientes contam o que funciona.</b><p>Os comentários mostram o que elogiar na equipe e o que ajustar no atendimento, direto de quem acabou de ser atendido.</p></div>
+</div><button type="button" class="flip-t" aria-label="Virar cartão: Feedback real para melhorar"></button></div>
+<div class="flip" data-reveal data-reveal-delay="2"><div class="inner">
+<div class="face front"><span class="ico card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17.5" cy="9" r="2.5"/><path d="M16 14.2c2.8.3 5 2.6 5 5.8"/></svg></span><h3>Sua equipe pede sem constrangimento</h3><span class="more">Virar ↻</span></div>
+<div class="face back"><b>"Encosta o celular aqui."</b><p>Em vez de pedir um favor, o atendente só aponta a placa. Fica natural, rápido, e vira parte do fechamento da conta.</p></div>
+</div><button type="button" class="flip-t" aria-label="Virar cartão: Sua equipe pede sem constrangimento"></button></div>
+<div class="flip" data-reveal data-reveal-delay="3"><div class="inner">
+<div class="face front"><span class="ico card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M15 9.5c0-1.4-1.3-2.2-3-2.2s-3 .8-3 2.2 1.3 1.9 3 2.3 3 .9 3 2.3-1.3 2.2-3 2.2-3-.8-3-2.2"/></svg></span><h3>Paga uma vez, trabalha todo dia</h3><span class="more">Virar ↻</span></div>
+<div class="face back"><b>Sem mensalidade para o link.</b><p>Você paga a placa e ela fica no balcão pedindo avaliação para cada cliente, todos os dias. Se precisar mudar o destino, atualizamos sem trocar a placa.</p></div>
+</div><button type="button" class="flip-t" aria-label="Virar cartão: Paga uma vez, trabalha todo dia"></button></div>
+</div>
+</div>
+</section>
+
+<!-- ============ ANTES E DEPOIS (ilustrativo) ============ -->
+<section class="block dark-band" id="antes-depois">
+<div class="wrap">
+<div class="head" data-reveal>
+<span class="eyebrow">Na prática</span>
+<h2>Como isso aparece para quem te procura.</h2>
+<p>Um exemplo ilustrativo de como a sua ficha no Google pode mudar quando os clientes satisfeitos passam a avaliar. Os números variam de negócio para negócio.</p>
+</div>
+<div class="compare" id="compare">
+<div data-reveal data-reveal-delay="1">
+<div class="tag">Antes</div>
+<div class="listing" data-tilt="10">
+<div class="nm">Sua Empresa</div>
+<div class="rt"><b>4,1</b><span class="st">★★★★☆</span><span>(23 avaliações)</span></div>
+<div class="bar"><span>5</span><i><b style="width:44%"></b></i></div>
+<div class="bar"><span>4</span><i><b style="width:22%"></b></i></div>
+<div class="bar"><span>3</span><i><b style="width:13%"></b></i></div>
+<div class="bar"><span>2</span><i><b style="width:9%"></b></i></div>
+<div class="bar"><span>1</span><i><b style="width:12%"></b></i></div>
+</div>
+</div>
+<div class="arrow" aria-hidden="true">→</div>
+<div data-reveal data-reveal-delay="2">
+<div class="tag">Com a placa no balcão</div>
+<div class="listing" data-tilt="10" id="after">
+<div class="nm">Sua Empresa</div>
+<div class="rt"><b id="afterRt">4,1</b><span class="st">★★★★★</span><span>(<b id="afterN">23</b> avaliações)</span></div>
+<div class="bar"><span>5</span><i><b data-w="78" style="width:44%"></b></i></div>
+<div class="bar"><span>4</span><i><b data-w="14" style="width:22%"></b></i></div>
+<div class="bar"><span>3</span><i><b data-w="4" style="width:13%"></b></i></div>
+<div class="bar"><span>2</span><i><b data-w="2" style="width:9%"></b></i></div>
+<div class="bar"><span>1</span><i><b data-w="2" style="width:12%"></b></i></div>
+</div>
+</div>
+</div>
+<p class="fine" style="margin-top:20px">Exemplo ilustrativo, não é resultado de um cliente real. Use a <a href="index.html#resultado">calculadora da página inicial</a> para estimar com o movimento da sua empresa.</p>
+</div>
+</section>
+
+<!-- ============ SEGMENTOS (carrossel 3D) ============ -->
+<section class="block" id="segmentos">
+<div class="wrap">
+<div class="head" data-reveal>
+<span class="eyebrow">Para quem é</span>
+<h2>Serve para todo negócio que atende gente.</h2>
+<p>Arraste ou use as setas para girar. Em cada cartão, onde colocar a placa para ela render mais.</p>
+</div>
+<div class="carousel" id="carousel" data-reveal>
+<div class="ring" id="ring">
+<article class="seg-card"><span class="emoji"><svg viewBox="0 0 24 24" fill="none" stroke="#FFC23D" stroke-width="2" stroke-linecap="round"><path d="M4 11h13a0 0 0 0 1 0 0 5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M17 12h1.5a2.5 2.5 0 0 1 0 5H16M8 3v4M12 3v4"/></svg></span><h3>Restaurantes e cafés</h3><p>O cliente acabou de comer bem. Na hora de pagar a conta, a avaliação sai com um toque.</p><span class="where">No caixa ou em cada mesa</span></article>
+<article class="seg-card"><span class="emoji"><svg viewBox="0 0 24 24" fill="none" stroke="#FFC23D" stroke-width="2" stroke-linecap="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.5 7.5L20 18M8.5 16.5L20 6"/></svg></span><h3>Salões e barbearias</h3><p>O cliente se olha no espelho e gosta do resultado. É o momento perfeito para pedir.</p><span class="where">No espelho ou na recepção</span></article>
+<article class="seg-card"><span class="emoji"><svg viewBox="0 0 24 24" fill="none" stroke="#FFC23D" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/><rect x="3" y="3" width="18" height="18" rx="5"/></svg></span><h3>Clínicas e consultórios</h3><p>Pacientes confiam em avaliações para escolher profissionais. Cada consulta pode virar uma.</p><span class="where">Na recepção, na saída</span></article>
+<article class="seg-card"><span class="emoji"><svg viewBox="0 0 24 24" fill="none" stroke="#FFC23D" stroke-width="2" stroke-linecap="round"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></span><h3>Lojas</h3><p>Compra feita, sacola na mão. O cliente avalia enquanto você embala.</p><span class="where">No caixa, ao lado da maquininha</span></article>
+<article class="seg-card"><span class="emoji"><svg viewBox="0 0 24 24" fill="none" stroke="#FFC23D" stroke-width="2" stroke-linecap="round"><path d="M6 8v8M18 8v8M3 10v4M21 10v4M6 12h12"/></svg></span><h3>Academias e estúdios</h3><p>Depois do treino, com a energia lá em cima, o aluno avalia a caminho da saída.</p><span class="where">Na recepção ou na catraca</span></article>
+<article class="seg-card"><span class="emoji"><svg viewBox="0 0 24 24" fill="none" stroke="#FFC23D" stroke-width="2" stroke-linecap="round"><path d="M3 20V9l9-5 9 5v11"/><path d="M9 20v-6h6v6"/></svg></span><h3>Hotéis e pousadas</h3><p>Hóspede bem recebido conta para os próximos. Peça antes que ele pegue a estrada.</p><span class="where">No check-out ou no quarto</span></article>
+<article class="seg-card"><span class="emoji"><svg viewBox="0 0 24 24" fill="none" stroke="#FFC23D" stroke-width="2" stroke-linecap="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></span><h3>Oficinas e serviços</h3><p>Na entrega do carro ou do serviço, o cliente vê o trabalho pronto e confia em avaliar.</p><span class="where">No balcão de entrega</span></article>
+<article class="seg-card"><span class="emoji"><svg viewBox="0 0 24 24" fill="#FFC23D"><circle cx="6" cy="10" r="2.2"/><circle cx="10" cy="6" r="2.2"/><circle cx="14" cy="6" r="2.2"/><circle cx="18" cy="10" r="2.2"/><path d="M12 11c-3 0-6 4-6 6.5 0 2 2 2.5 3 2 1.5-.6 4.5-.6 6 0 1 .5 3 0 3-2C18 15 15 11 12 11z"/></svg></span><h3>Pet shops e veterinários</h3><p>Tutor feliz buscando o pet de banho tomado é tutor que avalia com carinho.</p><span class="where">Na entrega do pet</span></article>
+</div>
+</div>
+<div class="car-ctrl">
+<button type="button" id="prev" aria-label="Anterior"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+<button type="button" id="next" aria-label="Próximo"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M9 5l7 7-7 7"/></svg></button>
+</div>
+</div>
+</section>
+
+<!-- ============ COMO COMEÇAR ============ -->
+<section class="block" style="padding-top:0">
+<div class="wrap">
+<div class="head" data-reveal>
+<span class="eyebrow">Como começar</span>
+<h2>Da conversa ao balcão.</h2>
+</div>
+<div class="cards">
+<article class="card" data-tilt="8" data-reveal data-reveal-delay="1"><span class="n">01</span><h3>Monte a sua</h3><p>Escolha o modelo e a quantidade na <a href="index.html#monte">página inicial</a> e mande o pedido pelo WhatsApp.</p></article>
+<article class="card" data-tilt="8" data-reveal data-reveal-delay="2"><span class="n">02</span><h3>Configuramos o link</h3><p>Apontamos o chip e o QR Code para a página de avaliação da sua empresa. No personalizado, você aprova a prova digital antes.</p></article>
+<article class="card" data-tilt="8" data-reveal data-reveal-delay="3"><span class="n">03</span><h3>Coloque no balcão</h3><p>A placa chega pronta para usar. É só deixar à vista e pedir: "encosta o celular aqui".</p></article>
+</div>
+</div>
+</section>
+
+<section class="block" style="padding-top:0">
+<div class="wrap">
+<div class="final" data-tilt="4" data-reveal>
+<div>
+<h2>Seu balcão pedindo avaliação por você.</h2>
+<p>Mande o nome da sua empresa no WhatsApp e receba a prévia da sua placa.</p>
+</div>
+<div class="actions">
+<a class="btn btn-gold js-wa" href="#" target="_blank" rel="noopener">Falar no WhatsApp</a>
+<a class="btn btn-ghost" href="produto.html" style="color:inherit">Conhecer o produto</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<span class="foot-brand"><span class="logo3d" aria-hidden="true"><svg class="l-side" viewBox="0 0 64 64" style="--z:-7.8px"><path d="M4 32 L16.5 15.5 Q18 14 20.5 14 H53 Q58 14 58 19 V45 Q58 50 53 50 H20.5 Q18 50 16.5 48.5 Z M17.5 28.6 A3.4 3.4 0 1 0 17.5 35.4 A3.4 3.4 0 1 0 17.5 28.6 Z" fill="#6B4100" fill-rule="evenodd"/></svg><svg class="l-side" viewBox="0 0 64 64" style="--z:-6.5px"><path d="M4 32 L16.5 15.5 Q18 14 20.5 14 H53 Q58 14 58 19 V45 Q58 50 53 50 H20.5 Q18 50 16.5 48.5 Z M17.5 28.6 A3.4 3.4 0 1 0 17.5 35.4 A3.4 3.4 0 1 0 17.5 28.6 Z" fill="#7E4D00" fill-rule="evenodd"/></svg><svg class="l-side" viewBox="0 0 64 64" style="--z:-5.2px"><path d="M4 32 L16.5 15.5 Q18 14 20.5 14 H53 Q58 14 58 19 V45 Q58 50 53 50 H20.5 Q18 50 16.5 48.5 Z M17.5 28.6 A3.4 3.4 0 1 0 17.5 35.4 A3.4 3.4 0 1 0 17.5 28.6 Z" fill="#935A00" fill-rule="evenodd"/></svg><svg class="l-side" viewBox="0 0 64 64" style="--z:-3.9px"><path d="M4 32 L16.5 15.5 Q18 14 20.5 14 H53 Q58 14 58 19 V45 Q58 50 53 50 H20.5 Q18 50 16.5 48.5 Z M17.5 28.6 A3.4 3.4 0 1 0 17.5 35.4 A3.4 3.4 0 1 0 17.5 28.6 Z" fill="#A86700" fill-rule="evenodd"/></svg><svg class="l-side" viewBox="0 0 64 64" style="--z:-2.6px"><path d="M4 32 L16.5 15.5 Q18 14 20.5 14 H53 Q58 14 58 19 V45 Q58 50 53 50 H20.5 Q18 50 16.5 48.5 Z M17.5 28.6 A3.4 3.4 0 1 0 17.5 35.4 A3.4 3.4 0 1 0 17.5 28.6 Z" fill="#BD7400" fill-rule="evenodd"/></svg><svg class="l-side" viewBox="0 0 64 64" style="--z:-1.3px"><path d="M4 32 L16.5 15.5 Q18 14 20.5 14 H53 Q58 14 58 19 V45 Q58 50 53 50 H20.5 Q18 50 16.5 48.5 Z M17.5 28.6 A3.4 3.4 0 1 0 17.5 35.4 A3.4 3.4 0 1 0 17.5 28.6 Z" fill="#D08000" fill-rule="evenodd"/></svg><svg class="l-front" viewBox="0 0 64 64"><defs><linearGradient id="lgF2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFE08A"/><stop offset=".45" stop-color="#FFC23D"/><stop offset="1" stop-color="#F29A00"/></linearGradient><linearGradient id="lgG2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".75"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="lgC2"><path d="M4 32 L16.5 15.5 Q18 14 20.5 14 H53 Q58 14 58 19 V45 Q58 50 53 50 H20.5 Q18 50 16.5 48.5 Z M17.5 28.6 A3.4 3.4 0 1 0 17.5 35.4 A3.4 3.4 0 1 0 17.5 28.6 Z" clip-rule="evenodd"/></clipPath></defs><path d="M4 32 L16.5 15.5 Q18 14 20.5 14 H53 Q58 14 58 19 V45 Q58 50 53 50 H20.5 Q18 50 16.5 48.5 Z M17.5 28.6 A3.4 3.4 0 1 0 17.5 35.4 A3.4 3.4 0 1 0 17.5 28.6 Z" fill="url(#lgF2)" fill-rule="evenodd"/><g clip-path="url(#lgC2)"><path d="M0 0H64V27Q34 36 0 26Z" fill="url(#lgG2)"/></g><g fill="none" stroke="#0A1430" stroke-width="3.4" stroke-linecap="round"><path d="M31 25.5a9 9 0 0 1 0 13"/><path d="M37.5 21a15.5 15.5 0 0 1 0 22"/><path d="M44 16.8a21.5 21.5 0 0 1 0 30.4"/></g><circle cx="25.5" cy="32" r="2.6" fill="#0A1430"/></svg></span><span>© 2026 rctag · Placas NFC para avaliações · <a href="produto.html">O produto</a> · <a href="beneficios.html">Para o seu negócio</a></span></span>
+<span>Google e Google Maps são marcas da Google LLC. A rctag não é afiliada ao Google.</span>
+</div>
+</footer>
+
+
+<script src="vendor/three.min.js"></script>
+<script src="assets/fx.js"></script>
+<script>
+(function(){
+const clamp = (x,a=0,b=1) => Math.min(b, Math.max(a, x));
+const lin = (x,a,b) => clamp((x-a)/(b-a));
+const ss = x => x*x*(3-2*x);
+const eo = x => 1 - Math.pow(1-x, 3);
+const mix = (a,b,k) => a + (b-a)*k;
+const RM = RCTAG.reduceMotion;
+const mobile = () => window.matchMedia('(max-width: 860px)').matches;
+
+/* ---------------- flip cards: tap to flip on touch ---------------- */
+document.querySelectorAll('.flip').forEach(f => f.querySelector('.flip-t').addEventListener('click', () => f.classList.toggle('flipped')));
+
+/* ---------------- before/after: numbers climb when in view ---------------- */
+(function(){
+const after = document.getElementById('after'); if(!after) return;
+const rt = document.getElementById('afterRt'), n = document.getElementById('afterN'), bars = after.querySelectorAll('b[data-w]');
+let done = false;
+const run = () => {
+if(done) return; done = true;
+bars.forEach(b => b.style.width = b.dataset.w + '%');
+const t0 = performance.now(), D = RM ? 1 : 2200;
+(function step(now){ const k = eo(clamp((now - t0) / D));
+n.textContent = Math.round(mix(23, 212, k)); rt.textContent = mix(4.1, 4.7, k).toFixed(1).replace('.', ',');
+if(k < 1) requestAnimationFrame(step); })(t0);
+};
+if('IntersectionObserver' in window){ const io = new IntersectionObserver(es => { if(es[0].isIntersecting){ setTimeout(run, 500); io.disconnect(); } }, { threshold:.5 }); io.observe(after); }
+else run();
+})();
+
+/* ---------------- 3D carousel of business types ---------------- */
+(function(){
+const car = document.getElementById('carousel'), ring = document.getElementById('ring'); if(!ring) return;
+const cards = [...ring.children], N = cards.length, step = 360 / N;
+let idx = 0, angle = 0, drag = null, auto = true;
+const radius = () => Math.round((ring.offsetWidth / 2) / Math.tan(Math.PI / N)) + 30;
+const layout = () => { const R = radius(); cards.forEach((c, i) => c.style.transform = `rotateY(${i * step}deg) translateZ(${R}px)`); apply(); };
+const apply = () => {
+ring.style.transform = `translateZ(${-radius()}px) rotateY(${angle}deg)`;
+const front = ((Math.round(-angle / step) % N) + N) % N;
+cards.forEach((c, i) => { c.classList.toggle('dim', i !== front); c.setAttribute('aria-hidden', i !== front); });
+};
+const go = d => { idx += d; angle = -idx * step; apply(); };
+document.getElementById('prev').addEventListener('click', () => { auto = false; go(-1); });
+document.getElementById('next').addEventListener('click', () => { auto = false; go(1); });
+car.addEventListener('pointerdown', e => { drag = { x:e.clientX, a:angle, ok:null, y:e.clientY }; });
+window.addEventListener('pointermove', e => {
+if(!drag) return;
+const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+if(drag.ok === null && Math.hypot(dx, dy) > 6) drag.ok = Math.abs(dx) > Math.abs(dy);
+if(!drag.ok) return;
+auto = false; ring.classList.add('dragging'); angle = drag.a + dx * .35; apply();
 });
+window.addEventListener('pointerup', () => { if(!drag) return; ring.classList.remove('dragging'); if(drag.ok){ idx = Math.round(-angle / step); angle = -idx * step; apply(); } drag = null; });
+window.addEventListener('resize', layout); layout();
+if(!RM) setInterval(() => { if(auto && !document.hidden) go(1); }, 3800);
+})();
 
-/* ---------- three.js helpers (usados em O produto e Para o seu negócio) ---------- */
-RCTAG.loadPlateTexture = (THREE, cb) => {
-  const img = new Image();
-  const tex = new THREE.Texture(img);
-  img.onload = () => { tex.needsUpdate = true; cb && cb(tex); };
-  img.src = 'img/placa-rctag.webp';
-  tex.anisotropy = 8;
-  if('encoding' in tex) tex.encoding = THREE.sRGBEncoding;
-  return tex;
+/* ---------------- hero: golden pin rising on a 3D map ---------------- */
+(function(){
+const THREE = window.THREE; if(!THREE) return;
+const canvas = document.getElementById('heroScene');
+let world, pin, stars = [], pins = [], ring, t0 = null, px = 0, py = 0, cx = 0, cy = 0;
+const st = RCTAG.stage(THREE, canvas, (t, dt) => {
+if(t0 === null) t0 = t;
+const T = RM ? 10 : t - t0, m = mobile();
+cx += (px - cx) * Math.min(1, dt * 3); cy += (py - cy) * Math.min(1, dt * 3);
+world.position.set(m ? 0 : 2.6, m ? 1.9 : -.9, 0);
+world.scale.setScalar(m ? .5 : .78);
+world.rotation.set(.52 + cy * .06, -.35 + T * .06 + cx * .25, 0);
+// blue pins pop, then the gold one rises highest
+pins.forEach((p, i) => { const k = eo(lin(T, .3 + i * .08, 1 + i * .08)); p.scale.setScalar(Math.max(.001, k)); p.position.y = p.userData.h * k + Math.sin(t * 1.4 + i) * .03; });
+const g = eo(lin(T, 1.2, 2.6));
+pin.scale.setScalar(Math.max(.001, g * 1.25)); pin.position.y = .2 + g * 1.5 + Math.sin(t * 1.2) * .08; pin.rotation.y = t * .8;
+stars.forEach((s, i) => { const k = eo(lin(T, 2.2 + i * .15, 2.8 + i * .15)); const a = t * .7 + i * Math.PI * 2 / 5;
+s.position.set(Math.cos(a) * 1.25, pin.position.y + 1 + Math.sin(a * 2) * .12, Math.sin(a) * 1.25); s.scale.setScalar(Math.max(.001, k * .38)); s.rotation.y = -a + t * 2; });
+const f = (t * .5) % 1; ring.scale.setScalar(.4 + f * 3.2); ring.material.opacity = (1 - f) * .7 * g;
+});
+if(!st) return;
+const { scene, camera } = st;
+camera.position.set(0, .4, 12.5);
+scene.add(new THREE.AmbientLight(0xbfd4ff, .5));
+const key = new THREE.DirectionalLight(0xffffff, 1.1); key.position.set(4, 6, 5); scene.add(key);
+const gl = new THREE.PointLight(0xffc23d, 2.2, 10); gl.position.set(0, 2.5, 1.5);
+world = new THREE.Group(); scene.add(world); world.add(gl);
+// map disk with a street grid
+const cv = document.createElement('canvas'); cv.width = cv.height = 1024; const x = cv.getContext('2d');
+const grd = x.createRadialGradient(512,512,0,512,512,512); grd.addColorStop(0,'rgba(40,110,230,.55)'); grd.addColorStop(.7,'rgba(20,60,150,.25)'); grd.addColorStop(1,'rgba(10,30,80,0)');
+x.fillStyle = grd; x.fillRect(0,0,1024,1024);
+x.strokeStyle = 'rgba(140,205,255,.55)';
+for(let i=0;i<=1024;i+=64){ x.lineWidth = i % 256 ? 1.5 : 4; x.beginPath(); x.moveTo(i,0); x.lineTo(i,1024); x.stroke(); x.beginPath(); x.moveTo(0,i); x.lineTo(1024,i); x.stroke(); }
+x.lineWidth = 6; x.beginPath(); x.moveTo(60,900); x.bezierCurveTo(300,600,700,700,980,120); x.stroke();
+for(let i=0;i<60;i++){ x.fillStyle = `rgba(90,160,255,${.08 + Math.random()*.14})`; x.fillRect(Math.floor(Math.random()*16)*64+6, Math.floor(Math.random()*16)*64+6, 52, 52); }
+const mask = x.createRadialGradient(512,512,300,512,512,512); // fade the disk edge
+x.globalCompositeOperation = 'destination-in'; mask.addColorStop(0,'#000'); mask.addColorStop(1,'rgba(0,0,0,0)'); x.fillStyle = mask; x.fillRect(0,0,1024,1024);
+const disk = new THREE.Mesh(new THREE.CircleGeometry(4.6, 96), new THREE.MeshBasicMaterial({ map:new THREE.CanvasTexture(cv), transparent:true, depthWrite:false }));
+disk.rotation.x = -Math.PI/2; world.add(disk);
+// pin geometry: sphere head + cone tip
+const mkPin = (color, emissive, s) => {
+const g = new THREE.Group();
+const mat = new THREE.MeshStandardMaterial({ color, emissive, emissiveIntensity:.35, roughness:.25, metalness:.3 });
+const head = new THREE.Mesh(new THREE.SphereGeometry(.34*s, 32, 24), mat); head.position.y = .62*s;
+const tip = new THREE.Mesh(new THREE.ConeGeometry(.3*s, .6*s, 32), mat); tip.rotation.x = Math.PI; tip.position.y = .28*s;
+const dot = new THREE.Mesh(new THREE.SphereGeometry(.13*s, 20, 16), new THREE.MeshStandardMaterial({ color:0x0a1430, roughness:.5 })); dot.position.set(0, .62*s, .27*s);
+const dot2 = dot.clone(); dot2.position.z = -.27*s;
+g.add(head, tip, dot, dot2); return g;
 };
+[[-2.4,-1],[2.2,-1.6],[-1.2,2.1],[2.8,1.3],[-3,1.2],[.8,-2.6],[1.6,2.8],[-1.9,-2.5]].forEach(([px2, pz], i) => {
+const p = mkPin(0x8fc8ff, 0x2f6feb, .7); p.position.set(px2, 0, pz); p.userData.h = .05; world.add(p); pins.push(p);
+});
+pin = mkPin(0xffc23d, 0xff9900, 1); world.add(pin);
+const starGeo = new THREE.ExtrudeGeometry(RCTAG.starShape(THREE, .5), { depth:.16, bevelEnabled:true, bevelThickness:.05, bevelSize:.04, bevelSegments:3 });
+starGeo.center();
+const starMat = new THREE.MeshStandardMaterial({ color:0xffc23d, emissive:0xff9900, emissiveIntensity:.45, roughness:.2, metalness:.5 });
+for(let i=0;i<5;i++){ const s = new THREE.Mesh(starGeo, starMat); world.add(s); stars.push(s); }
+ring = new THREE.Mesh(new THREE.RingGeometry(.5, .56, 64), new THREE.MeshBasicMaterial({ color:0xffc23d, transparent:true, opacity:0, depthWrite:false, side:THREE.DoubleSide, blending:THREE.AdditiveBlending }));
+ring.rotation.x = -Math.PI/2; ring.position.y = .02; world.add(ring);
+const halo = new THREE.Sprite(new THREE.SpriteMaterial({ map:RCTAG.glowTexture(THREE, '255,190,60'), transparent:true, opacity:.5, depthWrite:false, blending:THREE.AdditiveBlending }));
+halo.scale.set(4, 4, 1); halo.position.y = 1.8; world.add(halo);
+scene.add(RCTAG.makeDust(THREE, 300, 22));
+window.addEventListener('pointermove', e => { px = e.clientX / innerWidth - .5; py = e.clientY / innerHeight - .5; });
+})();
+})();
+</script>
 
-// Rounded-rectangle acrylic plate: clear beveled body + the real printed face.
-RCTAG.makePlate = (THREE, tex, opt = {}) => {
-  const w = opt.w || 2.2, h = w * 952/1128, d = opt.d || .1, r = w * .05;
-  const shape = new THREE.Shape();
-  shape.moveTo(-w/2 + r, -h/2); shape.lineTo(w/2 - r, -h/2); shape.quadraticCurveTo(w/2, -h/2, w/2, -h/2 + r);
-  shape.lineTo(w/2, h/2 - r); shape.quadraticCurveTo(w/2, h/2, w/2 - r, h/2); shape.lineTo(-w/2 + r, h/2);
-  shape.quadraticCurveTo(-w/2, h/2, -w/2, h/2 - r); shape.lineTo(-w/2, -h/2 + r); shape.quadraticCurveTo(-w/2, -h/2, -w/2 + r, -h/2);
-  const geo = new THREE.ExtrudeGeometry(shape, { depth:d, bevelEnabled:true, bevelThickness:.018, bevelSize:.018, bevelSegments:4, curveSegments:10 });
-  geo.translate(0, 0, -d/2);
-  const body = new THREE.Mesh(geo, new THREE.MeshPhysicalMaterial({ color:0xdfeeff, roughness:.08, metalness:0, clearcoat:1, clearcoatRoughness:.05, transparent:true, opacity:.55 }));
-  const face = new THREE.Mesh(new THREE.PlaneGeometry(w * .985, h * .985), new THREE.MeshStandardMaterial({ map:tex, roughness:.35, metalness:0, transparent:true, alphaTest:.35 }));
-  face.position.z = d/2 + .02;
-  const back = new THREE.Mesh(new THREE.PlaneGeometry(w * .96, h * .96), new THREE.MeshStandardMaterial({ color:0xf2f5fa, roughness:.6 }));
-  back.position.z = -d/2 - .005; back.rotation.y = Math.PI;
-  const g = new THREE.Group(); g.add(body, face, back);
-  g.userData = { w, h, d, face, body, back };
-  return g;
-};
-
-// Soft glowing dot texture for particles and halos.
-RCTAG.glowTexture = (THREE, rgb = '120,190,255') => {
-  const c = document.createElement('canvas'); c.width = c.height = 128;
-  const x = c.getContext('2d'), g = x.createRadialGradient(64,64,0,64,64,64);
-  g.addColorStop(0, `rgba(${rgb},1)`); g.addColorStop(.25, `rgba(${rgb},.55)`); g.addColorStop(1, `rgba(${rgb},0)`);
-  x.fillStyle = g; x.fillRect(0,0,128,128);
-  return new THREE.CanvasTexture(c);
-};
-
-// Drifting bokeh particles like the scroll-world videos.
-RCTAG.makeDust = (THREE, n = 260, spread = 18) => {
-  const pos = new Float32Array(n*3), rnd = () => Math.random() - .5;
-  for(let i=0;i<n;i++){ pos[i*3] = rnd()*spread; pos[i*3+1] = rnd()*spread*.6; pos[i*3+2] = rnd()*spread*.8 - 4; }
-  const geo = new THREE.BufferGeometry(); geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
-  const mat = new THREE.PointsMaterial({ size:.16, map:RCTAG.glowTexture(THREE), transparent:true, depthWrite:false, blending:THREE.AdditiveBlending, opacity:.85 });
-  return new THREE.Points(geo, mat);
-};
-
-RCTAG.starShape = (THREE, r = .5) => {
-  const s = new THREE.Shape();
-  for(let i=0;i<10;i++){ const a = Math.PI/2 + i*Math.PI/5, rr = i%2 ? r*.45 : r; const x = Math.cos(a)*rr, y = Math.sin(a)*rr; i ? s.lineTo(x,y) : s.moveTo(x,y); }
-  s.closePath(); return s;
-};
-
-// Renderer sized to its canvas, paused when off screen.
-RCTAG.stage = (THREE, canvas, draw) => {
-  let gl = null;
-  try { gl = canvas.getContext('webgl2') || canvas.getContext('webgl'); } catch(e){}
-  if(!gl) return null;
-  const renderer = new THREE.WebGLRenderer({ canvas, context:gl, antialias:true, alpha:true });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
-  if('outputEncoding' in renderer) renderer.outputEncoding = THREE.sRGBEncoding;
-  const camera = new THREE.PerspectiveCamera(35, 1, .1, 200);
-  const scene = new THREE.Scene();
-  const size = () => { const w = canvas.clientWidth, h = canvas.clientHeight; renderer.setSize(w, h, false); camera.aspect = w/h; camera.updateProjectionMatrix(); };
-  size(); window.addEventListener('resize', size);
-  let visible = true;
-  if('IntersectionObserver' in window) new IntersectionObserver(es => { visible = es[0].isIntersecting; }).observe(canvas);
-  let last = performance.now();
-  function loop(now){
-    const dt = Math.min(.05, (now - last) / 1000); last = now;
-    if(visible){ draw(now/1000, dt); renderer.render(scene, camera); }
-    requestAnimationFrame(loop);
-  }
-  requestAnimationFrame(loop);   // first frame after the caller has built its scene
-  return { renderer, camera, scene, size };
-};
+</body>
+</html>
